@@ -1,0 +1,49 @@
+<?php 
+/**
+* %Description%*
+*
+* @package    zfmyadmin
+* @subpackage laytout
+* @copyright  http://zfmyadmin.com
+* @license    GNU General Public License   http://www.gnu.org/copyleft/gpl.html
+* @version    1.0
+* @link       http://zfmyadmin.com
+* @since      File available since Release 1.1.0
+* @author     Oleksii Chkhalo <oleksii.chkhalo@zfmyadmin.com>
+*/
+echo $this->doctype(Zend_View_Helper_Doctype::XHTML1_TRANSITIONAL); 
+?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
+    <head>
+       
+          <?php echo $this->partial("partials/head.phtml");?>
+
+    </head>
+    <body>
+    <div id="wrapper">
+        
+        <?php echo $this->partial("partials/header.phtml", array('view' => $this));?>
+        
+        <div id="vertical-wrapper">        
+           <div id="content">                   
+                <div id="action-menu">
+                    <?php echo $this->navigation()
+                                ->menu()
+                                ->setUseTranslator(false) 
+                                ->setContainer($this->zfmyadminMenu('create-menu'));
+                    ?> 
+                </div>
+               <div id="rubber">
+                    <div id="action" style="width: 99%">
+                        <div id="action-padding">
+                            <?php echo $this->layout()->content; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pFooter"></div>
+        </div>
+    <?php echo $this->partial("partials/footer.phtml");?>
+    </body>
+</html>

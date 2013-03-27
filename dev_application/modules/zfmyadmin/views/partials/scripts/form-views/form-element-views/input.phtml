@@ -1,0 +1,61 @@
+<style>
+    .form-field-attributes {
+        float: left;
+        width: 46%;
+    }
+    .form-field-validators, .form-field-filters {
+        float: left;
+        width: 25%; 
+    }
+</style>        
+<div id="set-form-fields-block">        
+            <div  class ="form-field">
+                <div class="form-field-attributes">
+                    <h4>Поля формы</h4>
+                    <p><label for="select-form-view-2">Имя</label>
+                    <input type="text" name="form-class-name" id="controller-name" size="20" value="myname"/>                    
+                    </p>
+                    <p><label for="select-form-view-3">Тип</label>
+                    <input type="text" name="form-class-name" id="controller-name" size="20" value="input"/><p>
+                    <p><label for="select-form-view-3">Обязательное поле</label>
+                    <input type="checkbox" name="form-class-name" id="controller-name" size="20" value="my_class"/><p>
+                </div>
+                <div class="form-field-validators">
+                    <h4>Фильтры</h4>
+                    <select multiple="multiple">
+                        <option>Int</option>
+                        <option>Float</option>
+                        <option>Text</option>
+                        <option>Email</option>
+                    </select>
+                </div>
+                <div class="form-field-filters">
+                    <h4>Валидаторы</h4>
+                    <select multiple="multiple">
+                        <option>Int</option>
+                        <option>Float</option>
+                        <option>Text</option>
+                        <option>Email</option>
+                    </select>
+                </div>
+                <div style="clear:both"></div>
+                <div class="form-field-view">
+                        <h4>Вид</h4>
+                        <input type="radio" id="select-form-view-2" name="form-field-view" data-name="users"  />
+                        <label for="select-form-view-2">Табличная верстка</label>
+
+
+                        <input type="radio" id="select-form-view-3" name="form-field-view" data-name="zendmyadmin"/>
+                        <label for="select-form-view-3">Верстка дивами</label>
+
+
+                        <input type="radio" id="select-form-view-4" name="form-field-view" data-name="" />
+                        <label for="select-form-view-4">Очищенная верстка</label>
+
+
+                        <input type="radio" id="select-form-view-5" name="form-field-view" data-name="" />
+                        <label for="select-form-view-5">Только элементы ввода</label>
+                </div>                
+            </div>
+            <button class="form-delete-button">Удалить</button>
+        </div>

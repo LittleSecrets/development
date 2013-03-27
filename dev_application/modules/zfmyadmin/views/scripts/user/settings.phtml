@@ -1,0 +1,103 @@
+<h1><?php echo $this->translate('User settings');?></h1>
+<div>
+    <form action="<?php echo $this->form->getAction(); ?>" method="<?php echo $this->form->getMethod(); ?>" id="<?php echo $this->form->getAttrib('id'); ?>"> 
+        <div id="user-settings-tabs">
+            <ul>
+                <li><a href="#user-settings-personal-data"><?php echo $this->translate('Personal data');?></a></li>
+                <li><a href="#user-settings-commit"><?php echo $this->translate('Commit settings');?></a></li>
+                <li><a href="#user-settings-doc-tabs"><?php echo $this->translate('Documentation settings');?></a></li>
+                <li><a href="#user-settings-codegenerator"><?php echo $this->translate('Codegenerator settings');?></a></li>
+            </ul>
+
+            <div id="user-settings-personal-data">
+                <?php
+                    echo $this->form->personal;
+                ?>
+            </div>
+
+            <div id="user-settings-commit">
+                <?php
+                    echo $this->form->commit;
+                ?>
+            </div>
+            
+            <div id="user-settings-codegenerator">
+                <?php
+                    echo $this->form->generator;
+                ?>
+            </div>
+
+            
+            
+            <div id="user-settings-doc-tabs">
+                <?php
+                    echo $this->form->doc->default;
+                ?>
+                
+                <h2><?php echo $this->translate('Specify dockblock tags you want to use for files, classes and methods');?></h2>
+                <div id="user-settings-doc-tags-tabs">                    
+                    <ul> 
+                        <li><a href="#user-settings-doc-phpfile"><?php echo $this->translate('php files');?></a></li>
+                        <li><a href="#user-settings-doc-class"><?php echo $this->translate('classes');?></a></li>
+                        <li><a href="#user-settings-doc-method"><?php echo $this->translate('methods');?></a></li>
+                        <li><a href="#user-settings-doc-view"><?php echo $this->translate('views');?></a></li>
+                        <li><a href="#user-settings-doc-css"><?php echo $this->translate('css files');?></a></li>
+                        <li><a href="#user-settings-doc-js"><?php echo $this->translate('js files');?></a></li>
+                    </ul> 
+                    <div id="user-settings-doc-phpfile">
+                        <h4><?php echo $this->translate('Show in php files docblock');?></h4>
+                        <?php
+                            echo $this->form->doc->phpFile;
+                        ?>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div id="user-settings-doc-class">
+                        <h4><?php echo $this->translate('Show in classes docblock');?></h4>
+                        <?php
+                            echo $this->form->doc->class;
+                        ?>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div id="user-settings-doc-method">
+                        <h4><?php echo $this->translate('Show in methods docblock');?></h4>
+                        <?php
+                            echo $this->form->doc->method;
+                        ?>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div id="user-settings-doc-view">
+                        <h4><?php echo $this->translate('Show in phtml files of view docblock');?></h4>
+                        <?php
+                            echo $this->form->doc->viewFile;
+                        ?>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div id="user-settings-doc-css">
+                        <h4><?php echo $this->translate('Show in public css files docblock');?></h4>
+                        <?php
+                            echo $this->form->doc->cssFile;
+                        ?>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div id="user-settings-doc-js">
+                        <h4><?php echo $this->translate('Show in public js files docblock');?></h4>
+                        <?php
+                            echo $this->form->doc->jsFile;
+                        ?>
+                        <div class="clear"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div> 
+        <?php
+            echo $this->form->submit;
+        ?>
+    </form>    
+</div>

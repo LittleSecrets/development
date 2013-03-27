@@ -1,0 +1,51 @@
+<?php echo $this->doctype(); ?>
+<html>
+<head>
+    <?php 
+        $this->headLink()->appendStylesheet('/css/reset.css');
+        $this->headLink()->appendStylesheet('/css/layout.css');
+        $this->headScript()->appendFile('/libs/jquery-1.8.0.min.js');
+    ?>
+    <?php echo $this->headTitle(); ?>
+    <?php echo $this->headLink(); ?>
+    <?php echo $this->headStyle(); ?>
+    <?php echo $this->headScript(); ?>
+</head>
+<body>
+    <div id="main">
+    <div id="header"><div class="center">
+        <div class="logo"><a href="<?php echo $this->url(array('module'=>'index', 'controller'=>'index', 'action'=>'index' ), 'default'); ?>"></a></div>       		
+            <ul class="nav menu">
+                <li><a href="">Return to zfmyadmin.com</a></li>
+                <li><a href="<?php echo $this->url(array('module'=>'zfmyadmin', 'controller'=>'index', 'action'=>'index', ), 'default'); ?>">zfmyadmin</a></li>
+            </ul>
+        </div>
+    </div>
+        
+    <div class="content">
+        <div class="center">
+            <div class="docs">
+                <h1><?php echo $this->translate('Yours site with zfmyadmin module')?></h1>
+                    <div id="navigation">
+                     <?php echo $this->navigation()->menu($this->demoMenu('left-menu')); ?>                       
+                    </div>
+
+                    <div class="text">
+                        <?php echo $this->layout()->content ?>
+                    </div>
+            </div>
+        </div>
+    </div>    
+        
+    
+    <div class="forFooter"></div>
+    </div>
+    <div id="footer">
+        <div class="center">
+            <a class="footer-to-top"></a>
+            <p class="copyright">&copy; 2012 ZfMyAdmin team, all rights reserved. </p>
+            <p class="warning">When creating this site 42 hours were saved thanks to ZfMyAdmin.  </p>
+        </div>
+    </div>
+</body>
+</html>

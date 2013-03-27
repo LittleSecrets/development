@@ -1,0 +1,10 @@
+<?php foreach ($this->transactions as $transaction): ?>
+    <h4 data-id="<?php echo $transaction->id?>" class="log-transaction-button <?php if(!empty($transaction->operations)):?>active-list<?php endif; ?>">
+        #<?php echo $transaction->id?> <?php echo $transaction->time?>
+    </h4>
+    <table id="log-transactions-list-<?php echo $transaction->id?>">
+        <?php foreach ($transaction->operations as $operation): ?>
+            <?php echo $this->partial("elementary-log-operation.phtml", array('view'=>$this, 'operation'=>$operation));?>
+        <?php endforeach; ?>
+    </table> 
+<?php endforeach; ?>

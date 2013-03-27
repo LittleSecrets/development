@@ -1,0 +1,36 @@
+<h1><?php echo $this->translate("Create Js");?></h1>
+<div id="tooltip"></div>
+<form action="<?php echo $this->form->getAction(); ?>" method="<?php echo $this->form->getMethod(); ?>" id="<?php echo $this->form->getAttrib('id'); ?>" class ="<?php echo $this->form->getAttrib('class'); ?>">
+    <div class="fieldset">
+        <?php echo $this->partial('select-module-controller-action.phtml', $this);?>
+    </div>
+    
+   
+    <div class="fieldset">
+        <div id="set-controller-settings-block" class="set-settings-block">
+        <ul>
+            <li><a href="#set-settings-block-public"><?php echo $this->translate("Js");?></a></li>
+	</ul> 
+          
+            <div id="set-settings-block-public">
+                <div class="fieldset">                      
+                    <?php echo $this->form->controllerCreateJs; ?>
+                    <label for="controller-create-js"><?php echo $this->translate("Create js file for controller");?></label>     
+                    <?php echo $this->form->actionCreateJs; ?>
+                    <label for="action-create-js"><?php echo $this->translate("Create js file for action");?></label>
+                </div>
+                <div class="fieldset">       
+                    <?php echo $this->form->includePublicFiles; ?>
+                    <label for="action-create-js"><?php echo $this->translate("Include  js file in controller");?></label>
+
+                </div>
+            </div> 
+        </div>
+    </div>    
+
+    <?php echo $this->form->createSubmit; ?> 
+    <?php echo $this->form->intentionSignature; ?>
+    <?php echo $this->form->creatorCategory; ?>
+</form>
+
+<?php echo $this->partial("settings-buttons.phtml");?>

@@ -1,0 +1,83 @@
+<h1><?php echo $this->translate("Create controller");?></h1>
+<div id="tooltip"></div>
+<form action="<?php echo $this->form->getAction(); ?>" method="<?php echo $this->form->getMethod(); ?>" id="<?php echo $this->form->getAttrib('id'); ?>" class ="<?php echo $this->form->getAttrib('class'); ?>">   
+    <div class="fieldset">
+        <h3>Модуль</h3>
+        <div class="hide"><?php echo $this->form->moduleName; ?></div>
+        <div id="module-select-button" class="select-button ui-state-active">        
+            <label id="module-select-label"><?php echo $this->form->moduleName->getValue(); ?></label>
+        </div>    
+        <div id="module-select-bar" class="hide" title="<?php echo $this->translate("Choose module");?>">
+            <div id="module-select-items" >
+                <?php foreach ($this->form->moduleName->getMultiOptions() as $key => $value) :?>
+                  <button value="<?php echo $value; ?>">  
+                    <?php echo $value; ?>
+                  </button>    
+                <?php endforeach; ?>                    
+           </div>
+        </div>        
+    </div>
+    
+    <div class="fieldset">
+        <h3>Имя контроллера</h3>
+        <div id="set-controller-name-block">
+            <?php echo $this->partial('settings-status.phtml');?>
+            <?php echo $this->form->controllerName->renderViewHelper(); ?>
+            <span class="suffix">Controller.php</span>
+            <div class="form-errors">
+                <?php echo $this->form->controllerName->renderErrors(); ?>                
+            </div>
+            <?php if($this->changeControllerName):?>
+            <div class ="change-to-zend-note ui-state-highlight ui-corner-all">
+                <?php echo$this->changeControllerName;?>
+            </div>
+            <?php endif;?>
+
+        </div>
+    </div>
+    
+    <div class="fieldset">
+        <div id="set-controller-settings-block" class="set-settings-block">
+        <ul>
+            <li><a href="#set-settings-block-system"><?php echo $this->translate("Class");?></a></li>
+            <li><a href="#set-settings-block-public"><?php echo $this->translate("Js & Css");?></a></li>
+	</ul> 
+            <div id="set-settings-block-system">
+                <div class="fieldset">
+                    <h4><?php echo $this->translate("Extends class of controller");?> </h4>
+                    <?php echo $this->form->controllerClassName; ?>
+                </div>
+
+                <div class="fieldset">
+                    <h4><?php echo $this->translate("Choose methods");?> </h4>
+                    <?php echo $this->form->controllerCreateInit; ?>
+                    <label>init</label> 
+                    <?php echo $this->form->controllerPreDispatch; ?>
+                    <label>preDispatch</label>       
+                    <?php echo $this->form->controllerCreatePostDispatch; ?>
+                    <label>postDispatch</label> 
+                </div>        
+            </div>
+            
+            <div id="set-settings-block-public">
+                <div class="fieldset">     
+                    <?php echo $this->form->controllerCreateJs; ?>
+                    <label for="controller-create-js"><?php echo $this->translate("Create javascript file for controller");?></label>
+                    <?php echo $this->form->controllerCreateCss; ?>
+                    <label for="controller-create-css"><?php echo $this->translate("Create css file for controller");?></label>
+                </div> 
+                <div class="fieldset">       
+                    <?php echo $this->form->includePublicFiles; ?>
+                    <label for="action-create-js"><?php echo $this->translate("Include javascript and css file to controller");?></label>
+                </div>
+            </div>
+                
+        </div>
+    </div>    
+
+    <?php echo $this->form->createSubmit; ?> 
+    <?php echo $this->form->intentionSignature; ?>
+    <?php echo $this->form->creatorCategory; ?>
+</form>
+
+<?php echo $this->partial("settings-buttons.phtml");?>

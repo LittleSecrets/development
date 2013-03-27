@@ -1,0 +1,42 @@
+#tooltip.module-tp {
+    margin-left: 255px;
+    margin-top: 43px;
+}
+
+.subform {
+    min-height: 180px;
+}
+
+.element-container {
+    width: 45%;
+    float: left;
+    margin: 0 20px 5px 0;
+}
+
+
+.element-container .element {
+    float: left;
+    margin-top: 5px;
+}
+
+.element-container div[id$="label"] {
+    width: 90%;
+    float: right;
+}
+
+#set-settings-block-bootstrap .subform {
+    min-height: 50px;
+}
+
+#set-settings-block-bootstrap .element-container {
+    width: 100%;
+}
+
+#set-settings-block-bootstrap .element-container div[id$="label"] {
+    width: 95%;
+}
+
+
+
+
+

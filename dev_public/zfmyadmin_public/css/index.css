@@ -1,0 +1,22 @@
+
+form {
+    margin-bottom: 30px;
+}
+
+dt {
+    margin: 10px 0 3px;
+}
+
+input[type="submit"] {
+    margin-top: 13px;
+}
+
+#notice {
+    background: url("images/ui-bg_glass_55_f8da4e_1x400.png") repeat-x scroll 50% 50% #F8DA4E;
+    border: 1px solid #FCD113;
+    color: #915608;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 605px;
+}

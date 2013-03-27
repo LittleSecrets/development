@@ -1,0 +1,48 @@
+<?php
+/**
+ * ZfMyAdmin
+ *
+ * LICENSE
+ *
+ * This source file is subject to the new BSD license, that is available
+ * at this URL: http://zfmyadmin.com/license
+ * If you are unable to obtain the licence, please send an email to:
+ * license@zfmyadmin.com
+ *
+ * @package    ZfMyAdmin
+ * @subpackage library/Validate
+ * @copyright  Copyright (c) 2012 Oleksii Chkhalo http://zfmyadmin.com
+ * @license    http://zfmyadmin.com/license     New BSD License
+ * @version    1.0
+ * @author     Oleksii Chkhalo <oleksii.chkhalo@zfmyadmin.com>
+ */
+
+/**
+ * 
+ *
+ * @package    zfmyadmin
+ * @subpackage library/Validate
+ */
+
+class Zfmyadmin_Validate_ControllerName extends Zfmyadmin_Validate_Regex
+{    
+   
+    /**
+     * Sets validator options
+     *
+     * @return void
+     */       
+    public function __construct()
+    {
+        /**
+         * Error messages
+         * @var array
+         */        
+        $this->_messageTemplates[parent::NOT_MATCH] = $this->translate('Invalid controller name');
+        $pattern = "%^[A-Z]+?[a-z0-9]*([A-Z]+[a-z0-9]*)*$%";
+        parent::__construct($pattern);
+        
+    }
+
+}
+

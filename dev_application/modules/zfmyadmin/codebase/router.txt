@@ -1,0 +1,7 @@
+$route = new Zend_Controller_Router_Route(
+    '%pattern%',
+     %params%
+);
+%projectRouterName%->addRoute('%routeName%', $route);
+
+/*zfmyadmin routers*/

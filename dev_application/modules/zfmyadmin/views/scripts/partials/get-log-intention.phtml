@@ -1,0 +1,15 @@
+ <table>
+    <?php $i = 0; $operations = (array)$this->operations;?>
+    <?php foreach($operations as $operation):?>
+         <tr>
+            <td class="action-info-icon" title="<?php echo $this->operationTypeTitle($operation->type); ?>">
+                <span class="ui-icon <?php echo $this->operationTypeIcon($operation->type); ?>"></span>
+            </td>
+            <td class="action-info-content"><?php echo $this->operationLogDesctiption($operation); ?></td>
+            <td class="action-info-read-code" data-id="<?php echo $i; ?>" data-type="intention">
+                <div class="ui-state-default ui-corner-all button-16"><span class="ui-icon ui-icon-grip-solid-horizontal"></span></div>
+            </td>   
+        </tr>
+        <?php $i++;?>
+    <?php endforeach; ?>
+</table>

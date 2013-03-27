@@ -1,0 +1,5 @@
+<?php foreach ($this->form->controllerName->getMultiOptions() as $key => $value) :?>
+  <button value="<?php echo $value; ?>" data-name="<?php echo $key; ?>">  
+    <?php echo $value; ?>
+  </button>    
+<?php endforeach; ?> 

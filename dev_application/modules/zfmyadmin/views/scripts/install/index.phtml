@@ -1,0 +1,232 @@
+<?php
+echo $this->doctype(Zend_View_Helper_Doctype::XHTML1_TRANSITIONAL);
+?>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>ZfMyAdmin Installation page</title>
+    <style>
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0 none;
+            overflow-y: scroll;
+        }
+        body {
+            height: 100%;
+            background: none repeat scroll 0 0 #E4E4E4;
+            font-family:  Verdana,Arial,sans-serif;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            border: 0 none;
+        }
+
+        #wrapper {
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #forFooter {
+            width: 100%;
+            height: 30px;
+            clear: both;
+            margin: 0;
+        }
+
+        #footer {
+            height: 25px;
+            margin-top: -25px;
+            border-top: 1px solid #A0A0A0;
+            background: #CCC;
+            padding: 10px;
+            color: #828282;
+            clear: both;
+            }
+
+        .center {
+            width: 980px;
+            margin: 0 auto;
+        }
+
+        #header {
+            height: 50px;
+            background: #2191C0;
+            border-bottom: 1px solid #FFF;
+            padding: 1px;
+
+        }
+
+        h1 {
+            color: #FFF;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #footer h4 {
+            text-align: center;
+            font-weight: normal;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        #form-install-submit {
+            margin: 5px 5px 7px 150px;
+            background:#097cb0;
+            padding: 5px 6px;
+            border: 1px solid #F6F6F6;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+            color: #FFF;
+            text-transform: uppercase;
+        }
+
+        #form-install-submit:hover {
+            background:#7CB441;
+            color: #FFF;
+            border: 1px solid #FFF;
+        }
+
+        #form-install-submit:active {
+            color: #222;
+        }
+
+        dl {
+            margin: 10px 20px;
+
+        }
+
+        dd {
+            margin: 0 0 5px 0;
+        }
+
+        dt {
+            padding-bottom: 2px;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="password"] {
+        border: 1px solid #A0A0A0;
+        height: 24px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        }
+
+        .warning {
+            background: #F9E587;
+            border: 1px solid #FCD113;
+            color: #915608;
+            border-radius: 5px;
+            font-size: 12px;
+            padding: 1px 20px;
+            margin: 10px 0;
+            box-shadow: 1px 1px 1px #FFF;
+        }
+
+        .forForm {
+            margin: 20px 0;
+            padding: 0;
+            background: #FFF;
+            border-radius: 5px;
+            border: 1px solid #A6C9E2;
+            height: 520px;
+        }
+
+        form {
+            width: 450px;
+            float: left;
+            margin: 10px 20px;
+        }
+
+        .comment {
+            width: 380px;
+            float: right;
+            padding: 20px;
+            border: 1px dashed #7CB441;
+            margin: 100px 60px 50px 0;
+            border-radius: 5px;
+            font-size: 14px;
+            background: #DEFFB5;
+            color: #7CB441;
+        }
+
+        .comment ol {
+            padding-left: 22px;
+        }
+
+        .comment li {
+            margin-bottom: 10px;
+        }
+
+        .folder {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+
+    </style>
+    <script>    
+        function separate_db_switch(){
+            var switcher = document.getElementById('separate_db');
+            if (switcher.checked) {
+              document.getElementById('form-install-host').disabled = false;
+              document.getElementById('form-install-username').disabled = false; 
+              document.getElementById('form-install-password').disabled = false; 
+              document.getElementById('form-install-dbname').disabled = false; 
+              document.getElementById('form-install-adapter').disabled = false;                            
+            } else {
+              document.getElementById('form-install-host').disabled = true;
+              document.getElementById('form-install-username').disabled = true; 
+              document.getElementById('form-install-password').disabled = true; 
+              document.getElementById('form-install-dbname').disabled = true; 
+              document.getElementById('form-install-adapter').disabled = true;
+            }
+        }
+    </script>    
+</head>
+<body>
+    <div id="wrapper">
+    <div id="header"><div class="center">
+        <h1><?php echo _('ZfMyAdmin Installation Page') ?></h1>
+    </div></div>
+        <div class="center">
+            <div class="warning">
+                <p><strong><?php echo _('Please fill in the form below to finish installation process.') ?></strong></p>
+                <p><?php echo _('Note that none of the existing project files, database tables and project settings will be changed during the installation. ZfMyAdmin allows you to uninstall itself without affecting the rest of the project, including the changes made by means of ZfMyAdmin.') ?></p>
+            </div>
+        <?php if(!empty($this->errors)): ?>
+            <ul class="error">
+               <?php foreach ($this->errors as $error): ?>
+                <li>
+                    <?php echo $error;?>
+                </li>                    
+                <?php endforeach; ?>
+            </ul>
+        <?php endif; ?>
+        <div class="forForm">
+        <?php
+            echo $this->form;
+        ?>
+            <div class="comment">
+                <h4><?php echo _('When you submit the form:') ?></h4>
+                <ol>
+                    <li><?php echo _('In the Public folder a new folder <span class="folder">zfmyadmin_public</span> will be created.'); ?></li>
+                    <li><?php echo _('New tables required for ZfMyAdmin to run will be created in a separate or existing database.'); ?></li>
+                    <li><?php echo _('ZfMyAdmin module will be configured to work properly within your application.'); ?></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+        <div id="forFooter"></div>
+    </div>
+    <div id="footer"><h4><?php echo _('2012 ZfMyAdmin team, all rights reserved.'); ?></h4></div>
+</body>
+<script>    
+    separate_db_switch();
+</script>
+</html>

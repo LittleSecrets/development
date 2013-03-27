@@ -1,0 +1,3 @@
+$(function(){
+    zfMyAdmin.selectModuleControllerAction();
+}); 

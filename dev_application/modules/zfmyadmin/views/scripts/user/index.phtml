@@ -1,0 +1,28 @@
+<h1><?php echo $this->translate('User management');?></h1>
+
+<h2><?php echo $this->translate('Register new user');?></h2>
+<?php echo $this->formCreate;?>
+
+<h2><?php echo $this->translate('Set user rights');?></h2>
+<div id="table-wrapper">
+<table width="100%">
+    <tr>
+        <th><?php echo $this->translate('#ID') ?></th>
+        <th><?php echo $this->translate('Username') ?></th>
+        <th><?php echo $this->translate('Name') ?></th>
+        <th><?php echo $this->translate('Email') ?></th>
+        <th><?php echo $this->translate('Company') ?></th>
+        <th><?php echo $this->translate('Status') ?></th>
+    </tr>
+    <?php foreach ($this->users as $row):?>
+        <tr>
+            <td><?php echo $row->user->id ?></td>
+            <td><?php echo $row->user->login ?></td>
+            <td><?php echo $row->personal->name ?></td>
+            <td><?php echo $row->personal->email ?></td>
+            <td><?php echo $row->personal->company ?></td>
+            <td><?php echo $row->form ?></td>
+        </tr>
+    <?php endforeach;?>
+</table>
+</div>

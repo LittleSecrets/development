@@ -1,0 +1,48 @@
+<h1><?php echo $this->translate("Create module");?></h1>
+<?php if(count($this->modules) > 0): ?> 
+    <div id="tooltip" class="module-tp">
+        <h4 class="tooltip-header"><?php echo $this->translate('Existing modules names');?>:</h4>
+        <div class="tooltip-list">
+            <?php foreach ($this->modules as $module):?>
+                <span class="tooltip-item" id="tooltip-<?php echo $module->name;?>"><?php echo $module->name;?></span>,&nbsp;
+            <?php endforeach;?>
+        </div>
+    </div>
+<?php endif; ?> 
+<form action="<?php echo $this->form->getAction(); ?>" method="<?php echo $this->form->getMethod(); ?>" id="<?php echo $this->form->getAttrib('id'); ?>" class ="<?php echo $this->form->getAttrib('class'); ?>">   
+    <div class="fieldset">
+        <?php echo $this->partial('settings-status.phtml');?>
+        <?php echo $this->form->moduleName->renderViewHelper();; ?>
+        <div class="form-errors">
+            <?php echo $this->form->moduleName->renderErrors(); ?>                
+        </div>
+    </div>
+    <div class="fieldset">   
+        <div id="set-module-settings-block" class="set-settings-block">
+            <ul>
+                <li><a href="#set-settings-block-folders"><?php echo $this->translate("Directories");?></a></li>
+                <li><a href="#set-settings-block-bootstrap"><?php echo $this->translate("Bootstrap and configs");?></a></li>
+            </ul>
+            <div id="set-settings-block-folders">                
+                <?php echo $this->form->folders; ?>                
+            </div>
+            <div id="set-settings-block-bootstrap">                
+                <?php echo $this->form->bootstrap; ?>                
+            </div>
+        </div>
+        
+    </div>
+
+<?php echo $this->form->createSubmit; ?> 
+<?php echo $this->form->intentionSignature; ?>
+<?php echo $this->form->creatorCategory; ?>
+    
+</form>
+
+<?php echo $this->partial("settings-buttons.phtml");?>
+
+<?php $this->inlineScript()->captureStart() ?>        
+    <?php if(!empty($this->modulesJsonData)): ?>
+        zfMyAdmin.modules  = <?php echo $this->modulesJsonData ?>;
+    <?php endif; ?> 
+<?php $this->inlineScript()->captureEnd() ?>

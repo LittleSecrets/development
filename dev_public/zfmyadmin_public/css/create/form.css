@@ -1,0 +1,64 @@
+/***** Begin form styles   *****/
+
+div#set-form-fields-block {
+    border: 1px solid #A6C9E2;
+    border-radius: 5px;
+    margin: 15px auto;
+    background-color: #FCFDFD;
+    overflow: auto;
+}
+
+div.form-field {
+    margin: 10px 5px 10px 30px;
+}
+
+div#set-form-fields-block h4 {
+    padding-bottom: 5px;
+}
+
+.form-field-attributes p {
+    position: relative;
+    margin: 7px 0 10px 0;
+}
+
+
+.form-field-attributes input{
+    float: right;
+    margin-right: 20px;
+    display: block;
+}
+
+.form-field-view label{
+    margin-right: 10px;
+}
+
+.form-delete-button {
+    margin: 0 0 10px 30px;
+}
+
+/* Begin select form view styles*/
+
+#form-name {
+    margin-left: 5px;
+}
+
+#set-form-settings-block {
+    min-height: 200px;
+}
+
+.select-form-view-item {
+    float:left;
+    width: 55%;
+    margin-right: 10%;
+    margin-bottom: 5px;
+}
+
+.select-form-view-item input {
+    margin-bottom: 3px;
+}
+
+.select-form-view-item .read-code-button {
+    float: right;
+    margin-left: 10px;
+}
+

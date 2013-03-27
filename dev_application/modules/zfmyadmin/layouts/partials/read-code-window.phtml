@@ -1,0 +1,26 @@
+<div id="read-code-window" title="<?php echo $this->translate('Details of operation')?>">
+    
+    <div id="operation-info-tabs">
+        <ul>
+          <li><a href="#operation-details-description"><?php echo $this->translate('Description')?></a></li>
+          <li><a href="#operation-details-code"><?php echo $this->translate('Generated code')?></a></li>    
+          <li><a href="#operation-full-details-code"><?php echo $this->translate('Generated code in file')?></a></li>  
+        </ul>
+        
+        <div id="operation-details-description" class="operation-details-field">
+
+        </div>
+        <div id="operation-details-code" class="operation-details-field">
+
+        </div>
+        <div id="operation-full-details-code" class="operation-details-field">
+
+        </div>
+        <div id="copy-button">
+            <button id="copyButton" style="position:relative; z-index: 2000;"><?php echo $this->translate('Copy to clipboard')?></button>
+        </div>
+        <div id="copyNotifier"><?php echo $this->translate('Code successfully copied!')?></div>
+        
+    </div>
+
+</div>

@@ -1,0 +1,6 @@
+<h4 class="tooltip-header">Existing controller names:</h4>
+<div class="tooltip-list">
+    <?php foreach ($this->controllers as $controller):?>
+        <span class="tooltip-controller" id="tooltip-<?php echo $this->moduleName;?>-<?php echo $controller->name;?>"><?php echo $controller->name;?></span>,&nbsp;
+    <?php endforeach;?>
+</div>

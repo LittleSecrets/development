@@ -1,0 +1,1072 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Zf\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-25 23:50+0200\n"
+"PO-Revision-Date: 2012-11-25 23:51+0200\n"
+"Last-Translator: los312 <los312@mail.ru>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;translate\n"
+"X-Poedit-Basepath: C:\\Sites\\mirohost.zfmyadmin.com\\dev_application\\modules\n"
+"X-Poedit-SearchPath-0: zfmyadmin\n"
+
+#: zfmyadmin/controllers/CreateController.php:69
+msgid "Module name changed in accordance to Zend standards, your input was:"
+msgstr "Имя модуля изменено в соответствии со стандартами Zend, вы ввели:"
+
+#: zfmyadmin/controllers/CreateController.php:89
+msgid "Module %name% not created(not enough rights), TODO saved to log"
+msgstr "Модуль %name% не создан (недостаточно прав), список \"К выполнению\" сохранен в лог"
+
+#: zfmyadmin/controllers/CreateController.php:91
+msgid "Module %name% not created, TODO not saved(not enough rights)"
+msgstr "Модуль %name% не создан, список \"К выполнению\" не сохранен (недостаточно прав)"
+
+#: zfmyadmin/controllers/CreateController.php:104
+msgid "Module %name% created"
+msgstr "Модуль %name% создан"
+
+#: zfmyadmin/controllers/CreateController.php:124
+msgid "Create module"
+msgstr "Создать модуль"
+
+#: zfmyadmin/controllers/CreateController.php:184
+msgid "Controller name changed in accordance to Zend standards, your input was:"
+msgstr "Имя контроллера изменено в соответствии со стандартами Zend, вы ввели:"
+
+#: zfmyadmin/controllers/CreateController.php:204
+msgid "Controller %name% not created(not enough rights), TODO saved to log"
+msgstr "Контроллер %name% не создан (недостаточно прав), список \"К выполнению\" сохранен в лог"
+
+#: zfmyadmin/controllers/CreateController.php:206
+msgid "Controller %name% not created, TODO not saved(not enough rights)"
+msgstr "Контроллер %name% не создан, список \"К выполнению\" не сохранен (недостаточно прав)"
+
+#: zfmyadmin/controllers/CreateController.php:214
+msgid "Controller %name% created"
+msgstr "Контроллер %name% создан"
+
+#: zfmyadmin/controllers/CreateController.php:244
+msgid "Create controller"
+msgstr "Создать контроллер"
+
+#: zfmyadmin/controllers/CreateController.php:314
+msgid "Action name changed in accordance to Zend standards, your input was:"
+msgstr "Имя  Action'а изменено в соответствии со стандартами Zend, вы ввели: "
+
+#: zfmyadmin/controllers/CreateController.php:332
+msgid "Action %name% not created(not enough rights), TODO saved to log"
+msgstr "Action %name% не создан (недостаточно прав), список \"К выполнению\" сохранен в лог"
+
+#: zfmyadmin/controllers/CreateController.php:334
+msgid "Action %name% not created, TODO not saved(not enough rights)"
+msgstr "Action %name% не создан, список \"К выполнению\" не сохранен (недостаточно прав)"
+
+#: zfmyadmin/controllers/CreateController.php:342
+msgid "Action %name% created"
+msgstr "Action %name% создан"
+
+#: zfmyadmin/controllers/CreateController.php:371
+msgid "Create Action"
+msgstr "Создать Action"
+
+#: zfmyadmin/controllers/CreateController.php:427
+msgid "Css %name% not created(not enough rights), TODO saved to log"
+msgstr "CSS %name% не создан (недостаточно прав), список \"К выполнению\" сохранен в лог"
+
+#: zfmyadmin/controllers/CreateController.php:429
+msgid "Css %name% not created, TODO not saved(not enough rights)"
+msgstr "CSS %name% не создан, список \"К выполнению\" не сохранен (недостаточно прав)"
+
+#: zfmyadmin/controllers/CreateController.php:437
+msgid "Css %name% created"
+msgstr "CSS %name% создан"
+
+#: zfmyadmin/controllers/CreateController.php:472
+msgid "Create Css"
+msgstr "Создать CSS"
+
+#: zfmyadmin/controllers/CreateController.php:526
+msgid "Js %name% not created(not enough rights), TODO saved to log"
+msgstr "JS %name% не создан (недостаточно прав), список \"К выполнению\" сохранен в лог"
+
+#: zfmyadmin/controllers/CreateController.php:528
+msgid "Js %name% not created, TODO not saved(not enough rights)"
+msgstr "JS %name% не создан, список \"К выполнению\" не сохранен (недостаточно прав)"
+
+#: zfmyadmin/controllers/CreateController.php:536
+msgid "Js %name% created"
+msgstr "JS %name% создан"
+
+#: zfmyadmin/controllers/CreateController.php:571
+msgid "Create Js"
+msgstr "Создать JS"
+
+#: zfmyadmin/controllers/CreateController.php:633
+msgid "Router %name% not created(not enough rights), TODO saved to log"
+msgstr "Router %name% не создан (недостаточно прав), список \"К выполнению\" сохранен в лог"
+
+#: zfmyadmin/controllers/CreateController.php:635
+msgid "Router %name% not created, TODO not saved(not enough rights)"
+msgstr "Router %name% не создан, список \"К выполнению\" не сохранен (недостаточно прав)"
+
+#: zfmyadmin/controllers/CreateController.php:643
+msgid "Router %name% created"
+msgstr "Router %name% создан"
+
+#: zfmyadmin/controllers/CreateController.php:671
+msgid "Create Route"
+msgstr "Создать route"
+
+#: zfmyadmin/controllers/DataController.php:33
+msgid "No logged in user to access this data"
+msgstr "Для доступа к данным нужно залогиниться"
+
+#: zfmyadmin/controllers/DataController.php:159
+msgid "This operation has another owner"
+msgstr "У этой операции есть другой владелец"
+
+#: zfmyadmin/controllers/DataController.php:179
+#: zfmyadmin/controllers/DataController.php:180
+msgid "intention of operaition expired"
+msgstr "намерение по операции устарело"
+
+#: zfmyadmin/controllers/IndexController.php:79
+msgid "Project settings saved"
+msgstr "Настройки проекта сохранены"
+
+#: zfmyadmin/controllers/InstallController.php:102
+msgid "Modules directory is non writable"
+msgstr "Запрещена запись в папку модуля"
+
+#: zfmyadmin/controllers/InstallController.php:107
+msgid "Directory configs are non writable"
+msgstr "Запрещена запись в папку configs"
+
+#: zfmyadmin/controllers/InstallController.php:111
+msgid "is non writable"
+msgstr "не подлежит записи"
+
+#: zfmyadmin/controllers/InstallController.php:130
+msgid "Invalid connection parameters or database disabled"
+msgstr "Неправильные параметры соединения или не включена БД"
+
+#: zfmyadmin/controllers/InstallController.php:132
+msgid "Data base adapter does not exist"
+msgstr "Адаптер БД не существует"
+
+#: zfmyadmin/controllers/InstallController.php:145
+msgid "Public files not extracted"
+msgstr "Публичные файлы не были извлечены"
+
+#: zfmyadmin/controllers/InstallController.php:171
+msgid "zfmyadmin.ini file not created"
+msgstr "файл zfmyadmin.ini не был создан"
+
+#: zfmyadmin/controllers/InstallController.php:190
+msgid "zfmyadmin database tables not created"
+msgstr "таблицы БД для zfmyadmin не были созданы"
+
+#: zfmyadmin/controllers/InstallController.php:232
+msgid "I want to uninstall ZfMyAdmin and permanently remove all its files and folders"
+msgstr "Я хочу удалить ZfMyAdmin вместе со всеми его файлами и папками"
+
+#: zfmyadmin/controllers/InstallController.php:277
+msgid "zfmyadmin database tables not removed. Please remove manually"
+msgstr "таблицы БД для zfmyadmin не были удалены. Пожалуйста, удалите вручную"
+
+#: zfmyadmin/controllers/InstallController.php:283
+msgid " not removed. Please remove manually"
+msgstr "не удалены. Пожалуйста, удалите вручную"
+
+#: zfmyadmin/controllers/InstallController.php:286
+msgid " not removed. Please remove folder of zfmyadmin module manually"
+msgstr "не удалены. Пожалуйста, удалите папку модуля zfmyadmin  вручную"
+
+#: zfmyadmin/controllers/InstallController.php:291
+msgid "Uninstall complete"
+msgstr "Удаление завершено"
+
+#: zfmyadmin/controllers/InstallController.php:293
+msgid "If zfmyadmin folder still remains in the project, please remove it manually"
+msgstr "Если папка zfmyadmin осталась в проекте, пожалуйста, удалите ее вручную"
+
+#: zfmyadmin/controllers/InstallController.php:301
+msgid "Uninstall errors"
+msgstr "Ошибки удаления"
+
+#: zfmyadmin/controllers/UserController.php:84
+msgid "User %name% removed"
+msgstr "Пользователь %name%  удален"
+
+#: zfmyadmin/controllers/UserController.php:91
+msgid "Rights for user %name% changed"
+msgstr "Права для пользователя %name%  изменены"
+
+#: zfmyadmin/controllers/UserController.php:115
+msgid "User %name% created"
+msgstr "Пользователь %name%  создан"
+
+#: zfmyadmin/controllers/UserController.php:190
+msgid "Your settings changed"
+msgstr "Ваши настройки изменены"
+
+#: zfmyadmin/controllers/UserController.php:292
+#: zfmyadmin/controllers/UserController.php:297
+#: zfmyadmin/controllers/UserController.php:304
+#: zfmyadmin/controllers/UserController.php:309
+msgid "You do not have rights to change these settings"
+msgstr "У вас нет прав для изменения данных настроек"
+
+#: zfmyadmin/controllers/UserController.php:328
+msgid "An error occured, settings not saved!"
+msgstr "Ошибка, настройки не сохранены!"
+
+#: zfmyadmin/controllers/UserController.php:356
+msgid "Your password changed"
+msgstr "Ваш пароль изменен"
+
+#: zfmyadmin/controllers/UserController.php:362
+msgid "Password not confirmed!"
+msgstr "Пароль не подтвержден!"
+
+#: zfmyadmin/data/locales/base-strings/Validate.php:4
+msgid "'%value%' contains characters which are non alphabetic and no digits"
+msgstr "'%value%' содержит символы, которые не являются буквами латинского алфавита или цифрами"
+
+#: zfmyadmin/data/locales/base-strings/Validate.php:5
+#: zfmyadmin/data/locales/base-strings/Validate.php:8
+#: zfmyadmin/data/locales/base-strings/Validate.php:11
+msgid "'%value%' is an empty string"
+msgstr "'%value%' - пустая строка"
+
+#: zfmyadmin/data/locales/base-strings/Validate.php:7
+msgid "'%value%' contains non alphabetic characters"
+msgstr "'%value%' содержит символы, которые не являются буквами"
+
+#: zfmyadmin/data/locales/base-strings/Validate.php:10
+msgid "'%value%' must contain only digits"
+msgstr "'%value%' должно содержвать только цифры"
+
+#: zfmyadmin/data/locales/base-strings/Validate.php:13
+msgid "Invalid type given. String expected"
+msgstr "Неверный тип. Требуется строка"
+
+#: zfmyadmin/data/locales/base-strings/Validate.php:14
+msgid "'%value%' is not valid email address in the basic format local-part@hostname"
+msgstr "'%value%' не является валидными email адресом в базовом формате local-part@hostname"
+
+#: zfmyadmin/data/locales/base-strings/Validate.php:15
+msgid "'%hostname%' is not valid hostname for email address '%value%'"
+msgstr "'%hostname%' не является валидным именем хоста для email адреса '%value%'"
+
+#: zfmyadmin/data/locales/base-strings/Validate.php:16
+msgid "'%hostname%' does not appear to have a valid MX record for the email address '%value%'"
+msgstr "'%hostname%' не имеет валидной MX записи для email адреса '%value%'"
+
+#: zfmyadmin/data/locales/base-strings/Validate.php:17
+msgid "'%hostname%' is not in a routable network segment. The email address '%value%' should not be resolved from public network"
+msgstr "'%hostname%' не является маршрутизируемым сегментом сети. Email адрес '%value%' не должен использоваться в публичных сетях"
+
+#: zfmyadmin/data/locales/base-strings/Validate.php:19
+msgid "The two given tokens do not match"
+msgstr "Введенные значения не совпадают"
+
+#: zfmyadmin/data/locales/base-strings/Validate.php:20
+msgid "No token was provided to match against"
+msgstr "Вы не ввели значение для сравнения"
+
+#: zfmyadmin/data/locales/base-strings/Validate.php:22
+msgid "'%value%' was not found in the haystack"
+msgstr "'%value%' не найден в списке"
+
+#: zfmyadmin/data/locales/base-strings/Validate.php:24
+msgid "Invalid type given. String or integer expected"
+msgstr "Неверный тип. Требуется строка или целое число"
+
+#: zfmyadmin/data/locales/base-strings/Validate.php:25
+msgid "'%value%' does not appear to be an integer"
+msgstr "'%value%' не является целым числом"
+
+#: zfmyadmin/data/locales/base-strings/Validate.php:27
+msgid "Value is required and can't be empty"
+msgstr "Поле обязательно для заполнения и не может быть пустым"
+
+#: zfmyadmin/data/locales/base-strings/Validate.php:28
+msgid "Invalid type given. String, integer, float, boolean or array expected"
+msgstr "Неверный тип. Требуется строка, целое число, вещественное число, булево значение или массив"
+
+#: zfmyadmin/data/locales/base-strings/Validate.php:30
+msgid "'%value%' does not match against pattern '%pattern%'"
+msgstr "'%value%' не соответствует паттерну '%pattern%'"
+
+#: zfmyadmin/data/locales/base-strings/Validate.php:32
+msgid "'%value%' is less than %min% characters long"
+msgstr "'%value%' меньше чем %min% символов в длину"
+
+#: zfmyadmin/data/locales/base-strings/Validate.php:33
+msgid "'%value%' is more than %max% characters long"
+msgstr "'%value%' более чем %max% символов в длину"
+
+#: zfmyadmin/library/Zfmyadmin/Form.php:37
+msgid "Submit"
+msgstr "Отправить"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/ChangePassword.php:48
+msgid "New password"
+msgstr "Новый пароль"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/ChangePassword.php:66
+msgid "Confirm password"
+msgstr "Подтвердите пароль"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/Create.php:49
+#: zfmyadmin/library/Zfmyadmin/Forms/Create.php:51
+msgid "Get TODO"
+msgstr "К выполнению"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/Install.php:44
+#: zfmyadmin/library/Zfmyadmin/Forms/ProjectSettings.php:44
+msgid "Project root"
+msgstr "Корневая директория проекта"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/Install.php:57
+msgid "Path to public folder"
+msgstr "Путь к папке public"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/Install.php:68
+msgid "Use separate database"
+msgstr "Использовать отдельную БД"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/Install.php:78
+msgid "Host"
+msgstr "Хост"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/Install.php:88
+#: zfmyadmin/library/Zfmyadmin/Forms/UserCreate.php:49
+#: zfmyadmin/library/Zfmyadmin/Forms/UserLogin.php:49
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/Install.php:97
+#: zfmyadmin/library/Zfmyadmin/Forms/UserCreate.php:67
+#: zfmyadmin/library/Zfmyadmin/Forms/UserLogin.php:69
+msgid "Password"
+msgstr "Пароль"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/Install.php:107
+msgid "Database"
+msgstr "База данных"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/Install.php:118
+msgid "Adapter"
+msgstr "Адаптер"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/ProjectSettings.php:56
+msgid "Public directory (the one for your CSS and JS files)"
+msgstr "Публичная директория (для хранения файлов CSS и JS)"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/ProjectSettings.php:69
+msgid "Directory for views of controllers in modules"
+msgstr "Директория для views контроллеров в модуле"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/ProjectSettings.php:80
+msgid "Put styles and JS to separate directories for each module"
+msgstr "Помещать стили и JS в отдельные папки для каждого модуля"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/ProjectSettings.php:91
+msgid "Directory for .css files (inside Public folder)"
+msgstr "Директория для файлов .css (внутри Публичной директории)"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/ProjectSettings.php:101
+msgid "Directory for .js files (inside Public folder)"
+msgstr "Директория для файлов .js (внутри Публичной директориии)"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/ProjectSettings.php:112
+msgid "File to store your routers (must be .php or .ini)"
+msgstr "Файл для хранения ваших router'ов (должен быть .php или .ini)"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/ProjectSettings.php:124
+msgid "Variable containing router object of class Zend_Controller_Router_Rewrite (for .php only)"
+msgstr "Переменная, содержащая объект router'а класса Zend_Controller_Router_Rewrite (только .php)"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UserCreate.php:87
+msgid "Hash"
+msgstr "Хэш"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UserCreate.php:105
+msgid "Create User"
+msgstr "Создать пользователя"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UsersEdit.php:82
+msgid "Save"
+msgstr "Сохранить"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UsersEdit.php:95
+msgid "Delete"
+msgstr "Удалить"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UserSettings.php:86
+msgid "Your name"
+msgstr "Ваше имя"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UserSettings.php:95
+msgid "Email"
+msgstr "Email"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UserSettings.php:105
+msgid "Company"
+msgstr "Компания"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UserSettings.php:137
+msgid "Save my changes to log"
+msgstr "Сохранять мою работу в лог"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UserSettings.php:148
+msgid "Save my changes to project"
+msgstr "Сохранять мою работу в проект"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UserSettings.php:182
+msgid "Include route to project"
+msgstr "Включать route в проект"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UserSettings.php:193
+msgid "Include route to project in .ini format"
+msgstr "Включать route в проект в формате .ini"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UserSettings.php:225
+msgid "Use module name as package name "
+msgstr "Использовать имя модуля как имя пакета"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UserSettings.php:234
+msgid "Your package name "
+msgstr "Ваше имя пакета"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UserSettings.php:243
+msgid "Use file type as package name (controllers, views, js, css ...)"
+msgstr "Использовать тип файла как имя пакета (controllers, views, js, css ...)"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UserSettings.php:252
+msgid "Your subpackage name "
+msgstr "Ваше имя субпакета"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UserSettings.php:261
+msgid "Use company name as copyright "
+msgstr "Использовать название компании как копирайт"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UserSettings.php:270
+msgid "Your copyright"
+msgstr "Ваш копирайт"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UserSettings.php:279
+msgid "Your license"
+msgstr "Ваша лицензия"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UserSettings.php:289
+msgid "Your version"
+msgstr "Ваша версия"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UserSettings.php:298
+msgid "Use my name and e-mail"
+msgstr "Использовать мое имя и e-mail"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/UserSettings.php:307
+msgid "Your author name "
+msgstr "Ваше имя автора"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/Create/Js.php:100
+msgid "TODO"
+msgstr "К выполнению"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/Create/Js.php:102
+msgid "Get intention"
+msgstr "Создать намерение"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/Create/Module.php:48
+msgid "Module name"
+msgstr "Имя модуля"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/Create/Module.php:249
+msgid "Create module Bootstrap.php"
+msgstr "Создать модуль Bootstrap.php"
+
+#: zfmyadmin/library/Zfmyadmin/Forms/Create/Module.php:256
+msgid "Create module application.ini"
+msgstr "Создать модуль application.ini"
+
+#: zfmyadmin/library/Zfmyadmin/Models/Create/Css.php:109
+msgid "Include controller CSS file to project "
+msgstr "Подключить CSS контроллера к проекту"
+
+#: zfmyadmin/library/Zfmyadmin/Models/Create/Css.php:158
+msgid "Include action CSS file to project"
+msgstr "Подключить CSS action'а к проекту"
+
+#: zfmyadmin/library/Zfmyadmin/Models/Create/Css.php:175
+#: zfmyadmin/library/Zfmyadmin/Models/Create/Js.php:175
+#: zfmyadmin/library/Zfmyadmin/Models/Create/View.php:98
+msgid "Add documentation code "
+msgstr "Добавить код документации"
+
+#: zfmyadmin/library/Zfmyadmin/Models/Create/Js.php:109
+msgid "Include controller JS file to project"
+msgstr "Подключить JS контроллера к проекту"
+
+#: zfmyadmin/library/Zfmyadmin/Models/Create/Js.php:158
+msgid "Include action JS file to project"
+msgstr "Подключить JS-файл action'а к проекту"
+
+#: zfmyadmin/library/Zfmyadmin/Models/Create/Module.php:87
+msgid "Create [production] section"
+msgstr "Создать раздел [production]"
+
+#: zfmyadmin/library/Zfmyadmin/Models/Create/Module.php:124
+msgid "Class Bootstrap of module"
+msgstr "Класс Bootstrap модуля"
+
+#: zfmyadmin/library/Zfmyadmin/Models/Create/Router.php:112
+msgid "<span class=\"error\"> Does not exist </span>"
+msgstr "<span class=\"error\"> Не существует </span>"
+
+#: zfmyadmin/library/Zfmyadmin/Models/Create/Router.php:124
+msgid "Insert router"
+msgstr "Введите роутер"
+
+#: zfmyadmin/library/Zfmyadmin/Validate/ActionExist.php:55
+msgid "Action does not exist!"
+msgstr "Action не существует!"
+
+#: zfmyadmin/library/Zfmyadmin/Validate/ActionName.php:32
+msgid "Invalid action name"
+msgstr "Некорректное имя action'а"
+
+#: zfmyadmin/library/Zfmyadmin/Validate/ActionNoExist.php:55
+msgid "Action already exists!"
+msgstr "Action уже существует!"
+
+#: zfmyadmin/library/Zfmyadmin/Validate/ControllerExist.php:55
+msgid "In this module such controller does not exist!"
+msgstr "В этом модуле такой контроллер не существует!"
+
+#: zfmyadmin/library/Zfmyadmin/Validate/ControllerName.php:41
+msgid "Invalid controller name"
+msgstr "Некорректное имя контролера"
+
+#: zfmyadmin/library/Zfmyadmin/Validate/ControllerNoExist.php:55
+msgid "In this module such controller already exists!"
+msgstr "В этом модуле такой контроллер уже существует!"
+
+#: zfmyadmin/library/Zfmyadmin/Validate/DirExists.php:67
+msgid "Directory does not exist!"
+msgstr "Директория не существует!"
+
+#: zfmyadmin/library/Zfmyadmin/Validate/ExtendsControllerClass.php:44
+msgid "Class does not extend Zend_Controller_Action!"
+msgstr "Класс не наследует Zend_Controller_Action!"
+
+#: zfmyadmin/library/Zfmyadmin/Validate/ExtendsControllerClass.php:48
+msgid "Class does not exist!"
+msgstr "Класс не существует!"
+
+#: zfmyadmin/library/Zfmyadmin/Validate/ModuleExist.php:45
+msgid "Module does not exist!"
+msgstr "Модуль не существует!"
+
+#: zfmyadmin/library/Zfmyadmin/Validate/ModuleName.php:32
+msgid "Invalid module name"
+msgstr "Неверное имя модуля"
+
+#: zfmyadmin/library/Zfmyadmin/Validate/ModuleNoExist.php:45
+msgid "Module already exists!"
+msgstr "Модуль уже существует!"
+
+#: zfmyadmin/library/Zfmyadmin/Validate/VarName.php:39
+msgid "'%value%' not correct variable name"
+msgstr "'%value%' неправильное имя переменной"
+
+#: zfmyadmin/views/helpers/OperationLogDesctiption.php:22
+#: zfmyadmin/views/helpers/OperationTypeTitle.php:21
+msgid "Create directory"
+msgstr "Создать директорию"
+
+#: zfmyadmin/views/helpers/OperationLogDesctiption.php:26
+#: zfmyadmin/views/helpers/OperationTypeTitle.php:24
+msgid "Create file"
+msgstr "Создать файл"
+
+#: zfmyadmin/views/helpers/OperationLogDesctiption.php:33
+#: zfmyadmin/views/helpers/OperationLogDesctiption.php:39
+#: zfmyadmin/views/helpers/OperationLogDesctiption.php:45
+#: zfmyadmin/views/helpers/OperationLogDesctiption.php:55
+#: zfmyadmin/views/helpers/OperationLogDesctiption.php:60
+#: zfmyadmin/views/helpers/OperationLogDesctiption.php:65
+#: zfmyadmin/views/helpers/OperationLogDesctiption.php:70
+msgid "in file"
+msgstr "в файле"
+
+#: zfmyadmin/views/helpers/OperationLogDesctiption.php:37
+msgid "Create class"
+msgstr "Создать класс"
+
+#: zfmyadmin/views/helpers/OperationLogDesctiption.php:43
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:141
+msgid "Create action"
+msgstr "Создать action"
+
+#: zfmyadmin/views/helpers/OperationLogDesctiption.php:53
+msgid "Create method"
+msgstr "Создать метод"
+
+#: zfmyadmin/views/helpers/OperationLogDesctiption.php:69
+msgid "Create route"
+msgstr "Создать route"
+
+#: zfmyadmin/views/helpers/OperationStatusDescription.php:22
+msgid "Saved to log"
+msgstr "Сохранено в лог"
+
+#: zfmyadmin/views/helpers/OperationStatusDescription.php:25
+msgid "Saved to log, file(s) and code added to project"
+msgstr "Сохранено в лог,  файл(ы) и код добавлены в проект"
+
+#: zfmyadmin/views/helpers/OperationStatusDescription.php:28
+msgid "Saved to log, failed to save file(s) and code to project"
+msgstr "Сохранено в лог, не удалось добавить файл(ы) и код в проект "
+
+#: zfmyadmin/views/helpers/OperationTypeTitle.php:27
+msgid "Create code"
+msgstr "Создать код"
+
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:49
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:50
+msgid "Login"
+msgstr "Вход"
+
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:72
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:73
+msgid "Manage users"
+msgstr "Управление пользователями"
+
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:81
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:82
+msgid "My settings"
+msgstr "Мои настройки"
+
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:91
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:92
+msgid "Project settings"
+msgstr "Настройки проекта"
+
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:100
+msgid "Uninstall"
+msgstr "Удалить"
+
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:101
+msgid "Uninstall zfmyadmin"
+msgstr "Удалить zfmyadmin"
+
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:109
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:110
+msgid "Logout"
+msgstr "Выход"
+
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:124
+msgid "Module"
+msgstr "Модуль"
+
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:132
+msgid "Controller"
+msgstr "Контроллер"
+
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:140
+msgid "Action"
+msgstr "Action"
+
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:148
+msgid "Css"
+msgstr "CSS"
+
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:149
+msgid "Create css"
+msgstr "Создать CSS"
+
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:156
+msgid "Js"
+msgstr "JS"
+
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:157
+msgid "Create js"
+msgstr "Создать JS"
+
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:164
+msgid "Route"
+msgstr "Route"
+
+#: zfmyadmin/views/helpers/ZfmyadminMenu.php:165
+msgid "Create router"
+msgstr "Создать роутер"
+
+#: zfmyadmin/layouts/create-layout.phtml:42
+msgid "Complete"
+msgstr "Выполнено"
+
+#: zfmyadmin/layouts/partials/footer.phtml:2
+msgid "Copyright ZfMyAdmin Team, 2012."
+msgstr "Copyright команда ZfMyAdmin, 2012."
+
+#: zfmyadmin/layouts/partials/read-code-window.phtml:1
+msgid "Details of operation"
+msgstr "Подробности операции"
+
+#: zfmyadmin/layouts/partials/read-code-window.phtml:5
+msgid "Description"
+msgstr "Описание"
+
+#: zfmyadmin/layouts/partials/read-code-window.phtml:6
+msgid "Generated code"
+msgstr "Сгенерированный код"
+
+#: zfmyadmin/layouts/partials/read-code-window.phtml:7
+msgid "Generated code in file"
+msgstr "Сгенерированный код в файле"
+
+#: zfmyadmin/layouts/partials/read-code-window.phtml:20
+msgid "Copy to clipboard"
+msgstr "Копировать в буфер"
+
+#: zfmyadmin/layouts/partials/read-code-window.phtml:22
+msgid "Code successfully copied!"
+msgstr "Код успешно скопирован!"
+
+#: zfmyadmin/views/partials/scripts/router-block.phtml:2
+msgid "Route name"
+msgstr "Имя route'а"
+
+#: zfmyadmin/views/partials/scripts/router-block.phtml:10
+msgid "Variables"
+msgstr "Переменные"
+
+#: zfmyadmin/views/partials/scripts/router-block.phtml:13
+msgid "Variable name"
+msgstr "Имя переменной"
+
+#: zfmyadmin/views/partials/scripts/router-block.phtml:14
+msgid "Default value"
+msgstr "Переменная по умолчанию"
+
+#: zfmyadmin/views/partials/scripts/router-block.phtml:18
+msgid "Add variable"
+msgstr "Добавить переменную"
+
+#: zfmyadmin/views/partials/scripts/select-module-controller-action.phtml:10
+#: zfmyadmin/views/scripts/create/action.phtml:13
+#: zfmyadmin/views/scripts/create/controller.phtml:10
+msgid "Choose module"
+msgstr "Выберите модуль"
+
+#: zfmyadmin/views/partials/scripts/select-module-controller-action.phtml:34
+#: zfmyadmin/views/scripts/create/action.phtml:39
+msgid "Choose controller"
+msgstr "Выберите контроллер"
+
+#: zfmyadmin/views/partials/scripts/select-module-controller-action.phtml:59
+msgid "Choose action"
+msgstr "Выберите action"
+
+#: zfmyadmin/views/partials/scripts/settings-buttons.phtml:1
+msgid "Set as project settings"
+msgstr "Сохранить как настройки проекта"
+
+#: zfmyadmin/views/partials/scripts/settings-buttons.phtml:2
+msgid "Set as my settings"
+msgstr "Сохранить как мои настройки"
+
+#: zfmyadmin/views/partials/scripts/settings-status.phtml:2
+msgid "zfmyadmin default settings"
+msgstr "настройки zfmyadmin по умолчанию"
+
+#: zfmyadmin/views/partials/scripts/settings-status.phtml:3
+msgid "project default settings"
+msgstr "настройки проекта по умолчанию"
+
+#: zfmyadmin/views/partials/scripts/settings-status.phtml:4
+msgid "user settings"
+msgstr "настройки пользователя"
+
+#: zfmyadmin/views/scripts/create/action.phtml:74
+msgid "View"
+msgstr "View"
+
+#: zfmyadmin/views/scripts/create/action.phtml:75
+#: zfmyadmin/views/scripts/create/controller.phtml:43
+msgid "Js & Css"
+msgstr "JS и CSS"
+
+#: zfmyadmin/views/scripts/create/action.phtml:76
+msgid "Router"
+msgstr "Роутер"
+
+#: zfmyadmin/views/scripts/create/action.phtml:81
+msgid "Create view"
+msgstr "Создать view"
+
+#: zfmyadmin/views/scripts/create/action.phtml:88
+msgid "Create javascript file "
+msgstr "Создать JavaScript файл "
+
+#: zfmyadmin/views/scripts/create/action.phtml:90
+msgid "Create css file"
+msgstr "Создать CSS файл "
+
+#: zfmyadmin/views/scripts/create/action.phtml:94
+#: zfmyadmin/views/scripts/create/controller.phtml:71
+msgid "Include javascript and css file to controller"
+msgstr "Подключать JavaScript и CSS файлы в контроллере"
+
+#: zfmyadmin/views/scripts/create/controller.phtml:42
+msgid "Class"
+msgstr "Класс"
+
+#: zfmyadmin/views/scripts/create/controller.phtml:47
+msgid "Extends class of controller"
+msgstr "Наследует класс контроллера"
+
+#: zfmyadmin/views/scripts/create/controller.phtml:52
+msgid "Choose methods"
+msgstr "Выберите методы"
+
+#: zfmyadmin/views/scripts/create/controller.phtml:65
+msgid "Create javascript file for controller"
+msgstr "Создать JavaScript файл для контроллера"
+
+#: zfmyadmin/views/scripts/create/controller.phtml:67
+#: zfmyadmin/views/scripts/create/css.phtml:18
+msgid "Create css file for controller"
+msgstr "Создать CSS файл для контроллера"
+
+#: zfmyadmin/views/scripts/create/css.phtml:20
+msgid "Create css file for action"
+msgstr "Создать CSS файл для action'а"
+
+#: zfmyadmin/views/scripts/create/css.phtml:24
+msgid "Include  css file in controller"
+msgstr "Подключить CSS файлы в контроллере"
+
+#: zfmyadmin/views/scripts/create/js.phtml:18
+msgid "Create js file for controller"
+msgstr "Создать JS файл для контроллера"
+
+#: zfmyadmin/views/scripts/create/js.phtml:20
+msgid "Create js file for action"
+msgstr "Создать JS файл для action'а"
+
+#: zfmyadmin/views/scripts/create/js.phtml:24
+msgid "Include  js file in controller"
+msgstr "Подключить JS файлы в контроллере"
+
+#: zfmyadmin/views/scripts/create/module.phtml:4
+msgid "Existing modules names"
+msgstr "Существующие имена модулей"
+
+#: zfmyadmin/views/scripts/create/module.phtml:23
+msgid "Directories"
+msgstr "Директории"
+
+#: zfmyadmin/views/scripts/create/module.phtml:24
+msgid "Bootstrap and configs"
+msgstr "Bootstrap и configs"
+
+#: zfmyadmin/views/scripts/data/actions-list-tooltip.phtml:1
+msgid "Existing actions names"
+msgstr "Существующие имена action'ов"
+
+#: zfmyadmin/views/scripts/data/controllers-list-tooltip.phtml:1
+msgid "Existing controller names"
+msgstr "Существующие именя контроллеров"
+
+#: zfmyadmin/views/scripts/data/get-operation-detail-description.phtml:1
+msgid "Operation id"
+msgstr "ID операции"
+
+#: zfmyadmin/views/scripts/data/get-operation-detail-description.phtml:3
+msgid "Status"
+msgstr "Статус"
+
+#: zfmyadmin/views/scripts/data/get-operation-detail-description.phtml:6
+msgid "This page will be available in url"
+msgstr "Эта страница будет доступна по адресу"
+
+#: zfmyadmin/views/scripts/data/get-operation-detail-description.phtml:8
+#: zfmyadmin/views/scripts/data/get-operation-detail-description.phtml:29
+msgid "URL will be generated by the default router"
+msgstr "URL будет сгенерирован router'ом по умолчанию"
+
+#: zfmyadmin/views/scripts/data/get-operation-detail-description.phtml:15
+#: zfmyadmin/views/scripts/data/get-operation-detail-description.phtml:36
+msgid "URL will be generated by your router"
+msgstr "URL будет сгенерирован вашим router'ом"
+
+#: zfmyadmin/views/scripts/index/index.phtml:1
+msgid "Welcome to ZfMyAdmin!"
+msgstr "Добро пожаловать в ZfMyAdmin!"
+
+#: zfmyadmin/views/scripts/index/index.phtml:4
+msgid "Please select the item you want to create in the left menu."
+msgstr "Пожалуйста, выберите элемент, который вы хотите создать, в меню слева."
+
+#: zfmyadmin/views/scripts/index/project-settings.phtml:7
+msgid ""
+"To add routes to your project, you need to insert\n"
+"        special label to the file with routes \n"
+"        (to the place where you want routes to be).\n"
+"        For .php files it is /*zfmyadmin routers*/,\n"
+"        for .ini files - ;zfmyadmin routers"
+msgstr ""
+"Чтобы добавить route'ы в ваш проект, вам нужно вставить\n"
+"        специальный ярлык в файл с route'ами \n"
+"        (в то место, где вы хотите видеть route'ы).\n"
+"        Для .php файлов это /*zfmyadmin routers*/,\n"
+"        для .ini файлов - ;zfmyadmin routers"
+
+#: zfmyadmin/views/scripts/install/index.phtml:195
+msgid "ZfMyAdmin Installation Page"
+msgstr "Страница установки ZfMyAdmin"
+
+#: zfmyadmin/views/scripts/install/index.phtml:199
+msgid "Please fill in the form below to finish installation process."
+msgstr "Пожалуйста, заполните форму для завершения процесса установки."
+
+#: zfmyadmin/views/scripts/install/index.phtml:200
+msgid "Note that none of the existing project files, database tables and project settings will be changed during the installation. ZfMyAdmin allows you to uninstall itself without affecting the rest of the project, including the changes made by means of ZfMyAdmin."
+msgstr "Обратите внимание, что существующие файлы проекта, таблицы БД и настройки не будут изменены в ходе установки. Вы сможете легко удалить ZfMyAdmin, не изменив при этом проект (в т.ч. и изменения, сделанные при помощи ZfMyAdmin)."
+
+#: zfmyadmin/views/scripts/install/index.phtml:216
+msgid "When you submit the form:"
+msgstr "Когда вы отправляете форму:"
+
+#: zfmyadmin/views/scripts/install/index.phtml:218
+msgid "In the Public folder a new folder <span class=\"folder\">zfmyadmin_public</span> will be created."
+msgstr "В Публичной директории будет создана новая папка <span class=\"folder\">zfmyadmin_public</span>."
+
+#: zfmyadmin/views/scripts/install/index.phtml:219
+msgid "New tables required for ZfMyAdmin to run will be created in a separate or existing database."
+msgstr "Новые таблицы, необходимые для функционирования ZfMyAdmin, будут созданы в существующией или отдельной БД."
+
+#: zfmyadmin/views/scripts/install/index.phtml:220
+msgid "ZfMyAdmin module will be configured to work properly within your application."
+msgstr "Модуль ZfMyAdmin будет сконфигурирован для работы в вашем приложении. "
+
+#: zfmyadmin/views/scripts/install/index.phtml:227
+msgid "2012 ZfMyAdmin team, all rights reserved."
+msgstr "2012 Команда ZfMyAdmin, все права защищены."
+
+#: zfmyadmin/views/scripts/install/uninstall.phtml:1
+msgid "Uninstall ZfMyAdmin Module"
+msgstr "Удалить модуль ZfMyAdmin"
+
+#: zfmyadmin/views/scripts/user/change-password.phtml:1
+msgid "Change password"
+msgstr "Новый пароль"
+
+#: zfmyadmin/views/scripts/user/index.phtml:1
+msgid "User management"
+msgstr "Управление пользователями"
+
+#: zfmyadmin/views/scripts/user/index.phtml:3
+msgid "Register new user"
+msgstr "Зарегистрировать нового пользователя"
+
+#: zfmyadmin/views/scripts/user/index.phtml:6
+msgid "Set user rights"
+msgstr "Установить права пользователей"
+
+#: zfmyadmin/views/scripts/user/index.phtml:10
+msgid "#ID"
+msgstr "#ID"
+
+#: zfmyadmin/views/scripts/user/index.phtml:12
+msgid "Name"
+msgstr "Имя"
+
+#: zfmyadmin/views/scripts/user/login.phtml:1
+msgid "Login to account"
+msgstr "Войти в аккаунт"
+
+#: zfmyadmin/views/scripts/user/settings.phtml:1
+msgid "User settings"
+msgstr "Настройки пользователя"
+
+#: zfmyadmin/views/scripts/user/settings.phtml:6
+msgid "Personal data"
+msgstr "Личные данные"
+
+#: zfmyadmin/views/scripts/user/settings.phtml:7
+msgid "Commit settings"
+msgstr "Настройки коммита"
+
+#: zfmyadmin/views/scripts/user/settings.phtml:8
+msgid "Documentation settings"
+msgstr "Настройки документации"
+
+#: zfmyadmin/views/scripts/user/settings.phtml:9
+msgid "Codegenerator settings"
+msgstr "Настройки кодогенератора"
+
+#: zfmyadmin/views/scripts/user/settings.phtml:37
+msgid "Specify dockblock tags you want to use for files, classes and methods"
+msgstr "Укажите теги докблока, которые вы хотите видеть в файлах, классах и методах"
+
+#: zfmyadmin/views/scripts/user/settings.phtml:40
+msgid "php files"
+msgstr "php файлы"
+
+#: zfmyadmin/views/scripts/user/settings.phtml:41
+msgid "classes"
+msgstr "классы"
+
+#: zfmyadmin/views/scripts/user/settings.phtml:42
+msgid "methods"
+msgstr "методы"
+
+#: zfmyadmin/views/scripts/user/settings.phtml:43
+msgid "views"
+msgstr "views"
+
+#: zfmyadmin/views/scripts/user/settings.phtml:44
+msgid "css files"
+msgstr "файлы CSS"
+
+#: zfmyadmin/views/scripts/user/settings.phtml:45
+msgid "js files"
+msgstr "файлы JS"
+
+#: zfmyadmin/views/scripts/user/settings.phtml:48
+msgid "Show in php files docblock"
+msgstr "Показывать в докблоке php файлов"
+
+#: zfmyadmin/views/scripts/user/settings.phtml:56
+msgid "Show in classes docblock"
+msgstr "Показывать в докблоке классов"
+
+#: zfmyadmin/views/scripts/user/settings.phtml:64
+msgid "Show in methods docblock"
+msgstr "Показывать в докблоке методов"
+
+#: zfmyadmin/views/scripts/user/settings.phtml:72
+msgid "Show in phtml files of view docblock"
+msgstr "Показывать в phtml файлах вида докблока "
+
+#: zfmyadmin/views/scripts/user/settings.phtml:80
+msgid "Show in public css files docblock"
+msgstr "Показывать в докблоках публичных CSS файлов"
+
+#: zfmyadmin/views/scripts/user/settings.phtml:88
+msgid "Show in public js files docblock"
+msgstr "Показывать в докблоке публичных JS файлов"
+
+#~ msgid "Intention"
+#~ msgstr "К выполнению"

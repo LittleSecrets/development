@@ -1,0 +1,13 @@
+<h1><?php echo $this->translate('Project settings'); ?></h1>
+<?php
+    echo $this->form;
+?>
+<p id="notice">
+   <?php
+    echo $this->translate('To add routes to your project, you need to insert
+        special label to the file with routes 
+        (to the place where you want routes to be).
+        For .php files it is /*zfmyadmin routers*/,
+        for .ini files - ;zfmyadmin routers');
+   ?> 
+</p>

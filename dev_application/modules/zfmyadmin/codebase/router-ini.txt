@@ -1,0 +1,7 @@
+routes.%routeName%.route = %pattern%
+routes.%routeName%.defaults.module = %moduleName%
+routes.%routeName%.defaults.controller = %controllerName%
+routes.%routeName%.defaults.action = %actionName%
+%vars%
+
+;zfmyadmin routers

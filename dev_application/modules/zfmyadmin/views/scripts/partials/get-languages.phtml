@@ -1,0 +1,11 @@
+<div id="lang"><a href="#"><?php echo $this->languages[$this->currentLanguage] ?></a><span class="bottom-arrow"></span></div>
+<div id="lang-all">
+    <ul>
+        <?php foreach($this->languages as $key => $value) :?>
+            <li>
+                <a href="<?php echo $this->url(array('module'=>'zfmyadmin', 'controller'=>'index', 'action'=>'language', 'code'=>$key),'default')?>"><?php echo $value;?></a>
+            </li>
+        <?php endforeach; ?>
+
+    </ul>
+</div>

@@ -1,0 +1,5 @@
+<table id="log-transactions-list-<?php echo $transaction->id?>">
+    <?php foreach ($this->operations as $operation): ?>
+        <?php echo $this->partial("elementary-log-operation.phtml", array('view'=>$this, 'operation'=>$operation));?>
+    <?php endforeach; ?>
+</table> 

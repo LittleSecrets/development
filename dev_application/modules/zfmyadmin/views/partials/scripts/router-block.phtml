@@ -1,0 +1,21 @@
+<div class="fieldset">
+    <h4><?php echo $this->translate('Route name'); ?></h4>
+    <?php echo $this->form->routerTitle; ?>
+</div>
+<div class="fieldset">
+    <span class="prefix">http://example.com/</span>
+    <?php echo $this->form->routerUrlName; ?>
+</div>
+<div class="last-fieldset">
+    <h4><?php echo $this->translate('Variables'); ?></h4>                    
+        <table id="create-router-vars">
+            <tr>
+                <th class="router-var-name"><?php echo $this->translate('Variable name'); ?></th>
+                <th class="router-var-value"><?php echo $this->translate('Default value'); ?></th>
+            </tr>
+           <?php echo $this->form->router; ?>
+        </table>
+    <div id="router-add-var-button" title="<?php echo $this->translate('Add variable'); ?>" class="ui-state-default ui-corner-all button-16">
+        <span class="ui-icon ui-icon-circle-plus"></span>
+    </div>
+</div> 

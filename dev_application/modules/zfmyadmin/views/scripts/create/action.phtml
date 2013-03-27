@@ -1,0 +1,109 @@
+<h1><?php echo $this->translate("Create Action");?></h1>
+<div id="tooltip"></div>
+<form action="<?php echo $this->form->getAction(); ?>" method="<?php echo $this->form->getMethod(); ?>" id="<?php echo $this->form->getAttrib('id'); ?>" class ="<?php echo $this->form->getAttrib('class'); ?>">
+    <div class="fieldset">
+    <table class="action">
+        <tr>
+            <td>
+                <h3>Модуль</h3>
+                <div class="hide"><?php echo $this->form->moduleName; ?></div>
+                <div id="module-select-button" class="select-button ui-state-active">
+                    <label id="module-select-label"><?php echo $this->form->moduleName->getValue(); ?></label>
+                </div>
+                <div id="module-select-bar" class="hide" title="<?php echo $this->translate("Choose module");?>" >
+                    <div id="module-select-items" >
+                        <?php foreach ($this->form->moduleName->getMultiOptions() as $key => $value) :?>
+                          <button value="<?php echo $value; ?>">
+                            <?php echo $value; ?>
+                          </button>
+                        <?php endforeach; ?>
+                   </div>
+                </div>
+            </td>
+            <td>
+                <h3>Контроллер</h3>
+                <div class="hide" id="controller-name-hidden-form"><?php echo $this->form->controllerName; ?></div>
+<!--                <div id="controller-select-button" class="select-button ui-state-active">
+                    <label id="controller-select-label"><?php echo $this->form->controllerName->getValue(); ?></label>
+                </div>-->
+                <div id="controller-select-button" class="select-button ui-state-active <?php if ($this->form->controllerName->getValue()==''): ?> ui-state-disabled<?php endif; ?>">
+                    <label id="controller-select-label">
+                        <?php if ($this->form->controllerName->getValue() != ''): ?>
+                        <?php echo $this->form->controllerName->getValue(); ?>Controller.php
+                        <?php endif; ?>
+                    </label>
+                </div>                
+                <div id="controller-name-errors">
+                    <?php echo $this->form->controllerName->renderErrors(); ?>
+                </div>
+                <div id="controller-select-bar" class="hide" title="<?php echo $this->translate("Choose controller");?>">
+                    <div id="controller-select-items" >
+                        <?php foreach ($this->form->controllerName->getMultiOptions() as $key => $value) :?>
+                          <button value="<?php echo $value; ?>"  data-name="<?php echo $key; ?>">
+                            <?php echo $value; ?>
+                          </button>
+                        <?php endforeach; ?>
+                   </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    </div>
+    
+    <div class="fieldset">
+        <h3>Name Action</h3>
+        <div id="set-controller-name-block">
+            <?php echo $this->partial('settings-status.phtml');?>
+            <?php echo $this->form->actionName->renderViewHelper(); ?>
+            <span class="suffix">Action()</span>
+            <div class="form-errors">
+                <?php echo $this->form->actionName->renderErrors(); ?>                
+            </div>
+            <?php if($this->changeActionName):?>
+            <div class ="change-to-zend-note ui-state-highlight ui-corner-all">
+                <?php echo$this->changeActionName;?>
+            </div>
+            <?php endif;?>
+
+        </div>
+    </div>
+    
+    <div class="fieldset">
+        <div id="set-controller-settings-block" class="set-settings-block">
+        <ul>
+            <li><a href="#set-settings-block-view"><?php echo $this->translate("View");?></a></li>
+            <li><a href="#set-settings-block-public"><?php echo $this->translate("Js & Css");?></a></li>
+            <li><a href="#set-settings-block-router"><?php echo $this->translate("Router");?></a></li>
+	</ul> 
+            <div id="set-settings-block-view">
+                <div class="fieldset">
+                    <?php echo $this->form->actionCreateView; ?>
+                    <label for="action-create-view"><?php echo $this->translate("Create view");?> </label>
+                </div>
+            </div>
+            
+            <div id="set-settings-block-public">
+                <div class="fieldset">       
+                    <?php echo $this->form->actionCreateJs; ?>
+                    <label for="action-create-js"><?php echo $this->translate("Create javascript file ");?></label>
+                    <?php echo $this->form->actionCreateCss; ?>
+                    <label for="action-create-css"><?php echo $this->translate("Create css file");?></label>
+                </div>
+                <div class="fieldset">       
+                    <?php echo $this->form->includePublicFiles; ?>
+                    <label for="action-create-js"><?php echo $this->translate("Include javascript and css file to controller");?></label>
+                </div>
+            </div>            
+            
+            <div id="set-settings-block-router">
+                <?php echo $this->partial('router-block.phtml', array('form'=>$this->form));?>
+            </div>            
+        </div>
+    </div>    
+
+    <?php echo $this->form->createSubmit; ?> 
+    <?php echo $this->form->intentionSignature; ?>
+    <?php echo $this->form->creatorCategory; ?>
+</form>
+
+<?php echo $this->partial("settings-buttons.phtml");?>

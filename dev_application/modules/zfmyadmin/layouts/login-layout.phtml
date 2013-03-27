@@ -1,0 +1,33 @@
+<?php 
+/**
+* %Description%*
+*
+* @package    zfmyadmin
+* @subpackage laytout
+* @copyright  http://zfmyadmin.com
+* @license    GNU General Public License   http://www.gnu.org/copyleft/gpl.html
+* @version    1.0
+* @link       http://zfmyadmin.com
+* @since      File available since Release 1.1.0
+* @author     Oleksii Chkhalo <oleksii.chkhalo@zfmyadmin.com>
+*/
+echo $this->doctype(Zend_View_Helper_Doctype::XHTML1_TRANSITIONAL); 
+?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
+    <head>
+
+        <?php echo $this->partial("partials/head.phtml");?>
+
+    </head>
+    <body>
+    <div id="wrapper">
+         <?php echo $this->partial("partials/header.phtml");?>
+        <div id="login-content">                   
+               <?php echo $this->layout()->content; ?>
+           </div>
+        <div id="pFooter"></div>
+         
+    </div>
+    <?php echo $this->partial("partials/footer.phtml");?>
+    </body>
+</html>

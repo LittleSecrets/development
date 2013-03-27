@@ -1,0 +1,27 @@
+<h1><?php echo $this->translate("Create Route");?></h1>
+<div id="tooltip"></div>
+<form action="<?php echo $this->form->getAction(); ?>" method="<?php echo $this->form->getMethod(); ?>" id="<?php echo $this->form->getAttrib('id'); ?>" class ="<?php echo $this->form->getAttrib('class'); ?>">
+    <div class="fieldset">
+        <?php echo $this->partial('select-module-controller-action.phtml', $this);?>
+    </div>
+    
+   
+    <div class="fieldset">
+        <div id="set-controller-settings-block" class="set-settings-block">
+        <ul>
+            <li><a href="#set-settings-block-router"><?php echo $this->translate("Router");?></a></li>
+	</ul> 
+          
+        <div id="set-settings-block-router">
+            <?php echo $this->partial('router-block.phtml', array('form'=>$this->form));?>
+        </div>   
+            
+        </div>
+    </div>    
+
+    <?php echo $this->form->createSubmit; ?> 
+    <?php echo $this->form->intentionSignature; ?>
+    <?php echo $this->form->creatorCategory; ?>
+</form>
+
+<?php echo $this->partial("settings-buttons.phtml");?>

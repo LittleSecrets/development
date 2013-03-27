@@ -1,0 +1,11 @@
+<tr>
+    <td class="action-info-icon" title="<?php echo $this->operationTypeTitle($this->operation->type); ?>">
+        <span class="ui-icon <?php echo $this->operationTypeIcon($this->operation->type); ?>"></span>
+    </td>
+    <td class="action-info-content <?php echo $this->operationStatus($this->operation->status); ?>">
+        <?php echo $this->operationLogDesctiption($this->operation); ?>
+    </td>
+    <td class="action-info-read-code" data-id="<?php echo $this->operation->id; ?>">
+        <div class="ui-state-default ui-corner-all button-16"><span class="ui-icon ui-icon-grip-solid-horizontal"></span></div>
+    </td>   
+</tr>

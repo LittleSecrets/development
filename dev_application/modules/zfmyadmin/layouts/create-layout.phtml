@@ -1,0 +1,92 @@
+<?php 
+/**
+* %Description%*
+*
+* @package    zfmyadmin
+* @subpackage laytout
+* @copyright  http://zfmyadmin.com
+* @license    GNU General Public License   http://www.gnu.org/copyleft/gpl.html
+* @version    1.0
+* @link       http://zfmyadmin.com
+* @since      File available since Release 1.1.0
+* @author     Oleksii Chkhalo <oleksii.chkhalo@zfmyadmin.com>
+*/
+echo $this->doctype(Zend_View_Helper_Doctype::XHTML1_TRANSITIONAL); 
+?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
+    <head>
+        
+        <?php echo $this->partial("partials/head.phtml");?>
+        <script type="text/javascript" src="/zfmyadmin_public/libs/zeroclipboard/ZeroClipboard.js"></script>
+        <script type="text/javascript" src="/zfmyadmin_public/libs/jquery-tooltip/jquery.tooltip.min.js"></script>
+    </head>
+    <body>
+    <div id="wrapper">
+        
+        <?php echo $this->partial("partials/header.phtml", array('view' => $this));?>
+        
+            
+           <div id="content">                   
+                <div id="action-menu">
+                    <?php echo $this->navigation()
+                                ->menu()
+                                ->setUseTranslator(false)
+                                ->setContainer($this->zfmyadminMenu('create-menu'));
+                    ?> 
+                </div>
+               <div id="rubber">
+                    <div id="action-info">
+                        <div id="action-info-tabs">
+                           <ul>
+                              <li><a href="#action-info-intention"><?php echo $this->translate("TODO");?></a></li>
+                              <li><a href="#action-info-log"><?php echo $this->translate("Complete");?></a></li>
+                           </ul>
+                           <div id="action-info-intention">
+                               <?php echo $this->action('get-log-intention',
+                                     'partials',
+                                     'zfmyadmin'); 
+                               ?>
+                           </div>
+                           <div id="action-info-log">
+                               <?php echo $this->action('get-log-transactions',
+                                     'partials',
+                                     'zfmyadmin'); 
+                               ?>
+                           </div>
+                        </div>
+                        <?php echo $this->partial("partials/read-code-window.phtml");?>
+
+                    </div> 
+                    <div id="action">
+                        <div id="action-padding">
+                            <?php echo $this->layout()->content; ?>
+                        </div>
+
+                    </div>  
+
+                </div>
+            </div>
+        
+        
+        <div id="pFooter"></div>
+    </div>
+    <?php echo $this->partial("partials/footer.phtml");?>
+        
+    <?php $this->inlineScript()->captureStart() ?>
+        
+        zfMyAdmin.creatorSettings = {};
+        <?php if(!empty($this->settingsJsonData)): ?>
+            zfMyAdmin.creatorSettings  = <?php echo $this->settingsJsonData ?>;
+        <?php endif; ?>
+        
+        <?php if(!empty($this->message)): ?>
+            zfMyAdmin.showLogTab = true;
+        <?php endif; ?>        
+        
+    <?php $this->inlineScript()->captureEnd() ?>
+
+    <?php echo $this->inlineScript(); ?>     
+        
+        
+    </body>
+</html>

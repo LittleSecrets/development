@@ -1,0 +1,8 @@
+<?php
+%docblock%
+?>
+
+<p>Hello!</p>
+<p>This is view for action %actionName%</p>
+<p>of controller %controllerName%Controller.php of module %moduleName%</p>
+<p>in file %viewFileName%</p>

@@ -1,0 +1,19 @@
+<?php
+/**
+ * View file of action index of controller Index in module blog
+ *
+ * @package blog
+ * @subpackage controllers
+ * @copyright zfmyadmin.com
+ * @license http://zfmyadmin.com/license     New BSD License
+ * @version 1.01
+ * @author My Name <email@exemple.com>
+ */
+
+?>
+<h2>Blog</h2>
+<?php foreach ($this->list as $item): ?>
+<h3><a href="<?php echo $this->url(array('id'=>$item->id), 'my-blog-post'); ?>"><?php echo $item->header; ?></a></h3>
+<p><?php echo $item->intro; ?></p>
+
+<?php endforeach; ?>

@@ -1,0 +1,344 @@
+/****** General styles for ZfMyAdmin ******/
+
+html, button, input, select, textarea { color: #222; }
+/*body { margin: 0; font-size: 1em; line-height: 1.4; }*/
+
+html {
+    height: 100%;
+}
+body{
+    height: 100%;
+    background: #E4E4E4; /*#cccccc url(../img/body-bg.jpg) repeat repeat;*/
+    font-family:  Verdana,Arial,sans-serif;
+    color: #333333;    
+}
+
+#wrapper{
+    min-width: 1200px;
+    height: 100%;
+    min-height: 100%;
+}
+
+
+
+#pFooter {
+    height: 40px;
+    clear: both;
+}
+
+/***** Text styles *****/
+h1 {
+    font-size: 18px;
+    font-weight: bold; 
+    margin-bottom: 10px;
+}
+h2 {
+    font-size: 16px;
+    font-weight: bold; 
+    margin-bottom: 5px;
+}
+h3 {
+    font-size: 14px;
+    font-weight: bold; 
+    margin-bottom: 5px;
+}
+h4 {
+    font: bold 13px;
+    font-weight: bold; 
+    margin-bottom: 5px;
+}
+
+
+
+/***** Begin Header styles *****/
+
+header {
+    height: 50px;
+    background: #2191C0;
+    border-bottom: 1px solid #FFF;
+    
+}
+
+#logo {
+    width: 158px;
+    height: 34px;
+    float: left;
+    margin: 8px 15px;
+}
+
+#logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../img/logo.png); 
+}
+
+#lang {
+    float: left;
+    margin-left: 30px;
+    padding: 13px 0 1px;
+    height: 35px;
+    
+}
+
+#lang a {
+    display: block;
+    float: left;
+    text-decoration: none;
+    color: #FCFCFC;
+    border-bottom: 1px dashed #E4E4E4;
+    padding-bottom: 1px;
+}
+
+.bottom-arrow {
+    border: 6px solid transparent;
+    border-top: 6px solid #ACDD4A;
+    width: 0;
+    height: 0;
+    display: block;
+    float: left;
+    margin: 7px 0 0 7px;
+
+}
+
+#lang a:hover {
+    color: #ACDD4A;
+}
+
+#lang-all {
+    position: absolute;
+    top: 46px;
+    left: 210px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    background: #FFF;
+    padding: 10px;
+    font-size: 0.9em;
+    display: none;
+}
+
+#lang-all li {
+    list-style: none;
+    margin-bottom: 3px;
+}
+
+#lang-all li a {
+    text-decoration: none;
+    color: #2191C0;
+}
+
+#lang-all li a:hover {
+    text-decoration: none;
+    color: #ACDD4A;
+}
+
+#main-menu {
+    float: right;    
+    height: 50px;
+    padding: 8px 10px 0 0;
+}
+
+#main-menu ul{
+    list-style-type: none;
+}
+
+#main-menu ul li{
+    float: left;
+    padding: 5px;
+}
+
+#main-menu a {
+    color: #FCFCFC;
+    display: block;
+    padding: 2px 7px;
+    text-decoration: none;
+}
+
+#main-menu a:hover {
+    color: #77D5F7;   
+}
+
+#main-menu li.active a {
+    background: #7DB441;
+    border: 1px solid #ACDD4A;
+    border-radius: 5px;   
+}
+
+a#menu-exit-button {
+    padding-left: 18px;
+    background: url(../img/exit.png) left center no-repeat transparent;
+}
+
+
+/***** Begin left sidebar (action menu) styles ******/
+
+#action-menu {
+    width: 190px;
+    float: left;
+    margin: 15px 20px 15px 10px;
+    background: #097CB0;
+    background: rgba(9,124,176,0.8);
+    border: 1px solid #FFF;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+#action-menu ul {
+    margin: 15px 0;
+}
+
+#action-menu li{
+    margin: 0;
+    list-style: none;
+    border-bottom: 1px solid #FFF;
+    text-transform: uppercase;
+}
+
+#action-menu ul :last-child {
+    border-bottom: none;
+}
+
+#action-menu li a{
+    display: block;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFF;
+}
+
+#action-menu li a:hover {
+    color: #333;
+    background-color: #F0F0F0;
+    background-image: url(../img/pointer_2.png);
+    background-position: 0px -24px;
+    background-repeat: no-repeat;
+}
+
+#action-menu li.active a {
+    color: #6EAC2C;
+    background-color: #FFF;
+    background-image: url(../img/pointer_2.png);
+    background-position: 0px 4px;
+    background-repeat: no-repeat;
+}
+
+
+/***** Begin content styles *****/
+
+#content {
+    width: 100%;
+}
+
+#rubber {
+    margin-left: 210px;
+    padding: 20px;
+    /*min-height: 530px;*/
+}
+/***** Begin central block styles *****/
+
+#action{
+    float: right;
+    width: 50%;
+    /*min-height: 600px; */
+}
+#action-padding {
+    padding-right: 20px;
+}
+
+/***** Begin forms and buttons styles *****/
+
+.fieldset{
+    margin: 0 0 13px 0;
+}
+
+input[type="submit"], button {
+    margin: 5px 5px 7px 0px;
+    background:#097cb0;
+    padding: 5px 6px;
+    border: 1px solid #F6F6F6;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+button {
+    padding: 3px 4px;
+}
+
+input[type="submit"]:hover, button:hover {
+    background:#7CB441;
+    color: #FFF;
+    border: 1px solid #FFF;
+}
+
+input[type="submit"]:active, button:active {
+    color: #222;
+}
+
+input[type="text"], input[type="password"] {
+    border: 1px solid #A0A0A0;
+    height: 24px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+#module-select-items button, #controller-select-items button, #action-select-items button, #controller-select-button, #module-select-button {
+    text-transform: none;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border: 2px solid #6EAC2C;
+    height: 22px;
+
+}
+
+
+
+/***** Begin Footer Styles ******/
+footer{
+    height: 30px;
+    margin-top: -56px;
+    border-top: 1px solid #A0A0A0;
+    background: #CCC;
+    padding: 15px 10px 10px;
+    color: #828282;
+    clear: both;
+}
+
+footer h4 {
+    text-align: center;
+    font-weight: normal;
+}
+
+/***** Flash message ******/
+
+#flash-message {
+    position: absolute;
+    left: 20%;
+    top: 20px;
+    height: 40px;
+    width: 60%;
+    background: none repeat scroll 0 0 rgba(249, 226, 117, 0.9);
+    border: 1px solid rgba(204, 204, 204, 0.9);
+    border-radius: 3px 3px 3px 3px;
+    color: #915608;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+#flash-message ul {
+    list-style: none;
+}
+
+/***** Error message ******/
+
+.errors {
+    color: #CC0000;
+    margin: 7px;
+}
+
+.errors li {
+    list-style: none;
+}
+

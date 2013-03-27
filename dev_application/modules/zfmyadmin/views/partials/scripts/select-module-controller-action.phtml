@@ -1,0 +1,71 @@
+
+    <table class="action">
+        <tr>
+            <td>
+                <h3>Модуль</h3>
+                <div class="hide"><?php echo $this->form->moduleName; ?></div>
+                <div id="module-select-button" class="select-button ui-state-active">
+                    <label id="module-select-label"><?php echo $this->form->moduleName->getValue(); ?></label>
+                </div>
+                <div id="module-select-bar" class="hide" title="<?php echo $this->translate("Choose module");?>" >
+                    <div id="module-select-items" >
+                        <?php foreach ($this->form->moduleName->getMultiOptions() as $key => $value) :?>
+                          <button value="<?php echo $value; ?>">
+                            <?php echo $value; ?>
+                          </button>
+                        <?php endforeach; ?>
+                   </div>
+                </div>
+            </td>
+         <tr>
+            <td>
+                <h3>Контроллер</h3>
+                <div class="hide" id="controller-name-hidden-form"><?php echo $this->form->controllerName; ?></div>
+                <div id="controller-select-button" class="select-button ui-state-active <?php if ($this->form->controllerName->getValue()==''): ?> ui-state-disabled<?php endif; ?>">
+                    <label id="controller-select-label">
+                        <?php if ($this->form->controllerName->getValue() != ''): ?>
+                        <?php echo $this->form->controllerName->getValue(); ?>Controller.php
+                        <?php endif; ?>
+                    </label>
+                </div>
+                <div id="controller-name-errors">
+                    <?php echo $this->form->controllerName->renderErrors(); ?>
+                </div>
+                <div id="controller-select-bar" class="hide" title="<?php echo $this->translate("Choose controller");?>">
+                    <div id="controller-select-items" >
+                        <?php foreach ($this->form->controllerName->getMultiOptions() as $key => $value) :?>
+                          <button value="<?php echo $value; ?>"  data-name="<?php echo $key; ?>">
+                            <?php echo $value; ?>
+                          </button>
+                        <?php endforeach; ?>
+                   </div>
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <h3>Action</h3>
+                <div class="hide" id="action-name-hidden-form"><?php echo $this->form->actionName; ?></div>
+                <div id="action-select-button" class="select-button ui-state-active<?php if ($this->form->actionName->getValue()==''): ?> ui-state-disabled<?php endif; ?>">
+                    <label id="action-select-label">
+                        <?php if ($this->form->actionName->getValue() != ''): ?>
+                        <?php echo $this->form->actionName->getValue(); ?>Action()
+                        <?php endif; ?>
+                    </label>
+                </div>
+                <div id="action-name-errors">
+                    <?php echo $this->form->actionName->renderErrors(); ?>
+                </div>
+                <div id="action-select-bar" class="hide" title="<?php echo $this->translate("Choose action");?>">
+                    <div id="action-select-items" >
+                        <?php foreach ($this->form->actionName->getMultiOptions() as $key => $value) :?>
+                          <button value="<?php echo $value; ?>"  data-name="<?php echo $key; ?>">
+                            <?php echo $value; ?>
+                          </button>
+                        <?php endforeach; ?>
+                   </div>
+                </div>
+            </td>            
+        </tr>
+    </table>
+    

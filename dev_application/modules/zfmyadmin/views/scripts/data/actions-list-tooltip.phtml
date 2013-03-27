@@ -1,0 +1,6 @@
+<h4 class="tooltip-header"><?php echo $this->translate('Existing actions names');?>:</h4>
+<div class="tooltip-list">
+    <?php foreach ($this->actions as $action):?>
+        <span class="tooltip-item" id="tooltip-<?php echo $this->moduleName;?>-<?php echo $this->controllerName;?>-<?php echo $action;?>"><?php echo $action;?></span>,&nbsp;
+    <?php endforeach;?>
+</div>

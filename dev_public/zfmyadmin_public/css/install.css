@@ -1,0 +1,43 @@
+/***** Uninstall page styles *****/
+
+.element-container {
+    background: none repeat scroll 0 0 #F9E587;
+    border: 1px solid #FCD113;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 1px 1px 1px #FFFFFF;
+    color: #915608;
+    font-size: 12px;
+    margin: 10px 0;
+    padding: 10px 20px;
+    width: 530px;
+}
+
+.element {
+    position: relative;
+}
+.element label {
+    position: absolute;
+    top: -2px;
+    left: 30px;    
+}
+
+input#form-install-submit {
+    background: #CC0000;
+}
+
+input#form-install-submit:hover {
+    background: #7CB441;
+    color: #FFFFFF;
+}
+
+input#form-install-submit:active {
+    background: #7CB441;
+    color: #222222;
+}
+
+input#form-install-submit[disabled="disabled"], input#form-install-submit[disabled="disabled"]:hover, input#form-install-submit[disabled="disabled"]:active {
+    background: grey;
+    color: #FFFFFF;
+    cursor: default;
+}
+
