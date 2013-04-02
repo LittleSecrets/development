@@ -694,4 +694,24 @@ class Zfmyadmin_CreateController extends Zfmyadmin_Controller_Action
     
 
 
+    public function formAction()
+    {
+        $this->view->headLink()->appendStylesheet('/zfmyadmin_public/css/create/form.css');                
+        $this->view->headScript()->appendFile('/zfmyadmin_public/js/create/form.js');
+        
+        $form = new Zfmyadmin_Forms_Create_Form(); 
+        $form = $this->setFormDefaultModuleControllerAction($form);
+        //$transaction = new Zfmyadmin_Models_Create_Router;
+        $vars = new Zfmyadmin_Models_Vars;        
+       
+
+        $settings = $vars->getAllSettingsTemplates(
+            Zfmyadmin_Models_Transaction::$_creatorsName[Zfmyadmin_Models_Operation::CATEGORY_FORM],    
+            $this->user->id            
+        );
+        $this->view->settingsJsonData = Zend_Json::encode($settings);  
+        $this->view->form = $form;
+        
+    }
+
 }

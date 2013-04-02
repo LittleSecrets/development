@@ -67,7 +67,7 @@ class Zfmyadmin_Models_Operation  extends Zend_Db_Table_Abstract
     const CATEGORY_ROUTER = 8;
     
 //    const CATEGORY_HELPER = 0;
-//    const CATEGORY_FORM = 0;    
+    const CATEGORY_FORM = 9;    
 //    const CATEGORY_PARTIAL = 0;
     
     const STATUS_ADD_TO_LOG = 1;

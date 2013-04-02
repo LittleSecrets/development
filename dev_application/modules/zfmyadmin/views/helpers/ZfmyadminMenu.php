@@ -167,6 +167,14 @@ class Zfmyadmin_View_Helper_ZfmyadminMenu  extends Zend_View_Helper_Abstract
                     'controller' => 'create',
                     'action'     => 'router',
                     'resource'   => 'creater',
+                ),         
+                array(
+                    'label'      => $this->translate('Form'),
+                    'title'      => $this->translate('Create form'),
+                    'module'     => 'zfmyadmin',
+                    'controller' => 'create',
+                    'action'     => 'form',
+                    'resource'   => 'creater',
                 ),                
             );
             return $pages;
