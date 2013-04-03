@@ -41,6 +41,35 @@
         </div> 
         <div id="set-settings-block-fields">
             <?php //echo $this->partial('router-block.phtml', array('form'=>$this->form));?>
+            <table width="100%">
+                <tr>
+                    <th><?php echo $this->translate("Label");?></th>
+                    <th><?php echo $this->translate("Name");?></th>
+                    <th><?php echo $this->translate("Tag");?></th>
+                    <th><?php echo $this->translate("Type");?></th>
+                    <th><?php echo $this->translate("Edit");?></th>
+                    <th><?php echo $this->translate("Delete");?></th>
+                </tr>
+                <tr>
+                    <td>My name</td>
+                    <td>username</td>
+                    <td>input</td>
+                    <td>text</td>
+                    <td>
+                        <div data-number="0" title="Удалить переменную" class="ui-state-default ui-corner-all button-16 form-delete-field-button">
+                             <span class="ui-icon ui-icon-circle-minus"></span>
+                        </div>
+                    </td>                    
+                    <td>
+                        <div data-number="0" title="Удалить переменную" class="ui-state-default ui-corner-all button-16 form-delete-field-button">
+                             <span class="ui-icon ui-icon-circle-minus"></span>
+                        </div>
+                    </td>
+                </tr>                
+            </table>
+            <div id="form-add-field-button" title="<?php echo $this->translate('Add variable'); ?>" class="ui-state-default ui-corner-all button-16">
+                <span class="ui-icon ui-icon-circle-plus"></span>
+            </div>            
         </div>             
             
         </div>
