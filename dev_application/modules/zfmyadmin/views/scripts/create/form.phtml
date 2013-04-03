@@ -83,3 +83,16 @@
 </form>
 
 <?php echo $this->partial("settings-buttons.phtml");?>
+<div id="add-form-field-dialog" style="display: none" title="<?php echo $this->translate("Add/Edit field");?>">
+    <?php echo $this->field->name; ?>
+    <?php echo $this->field->tag; ?>
+    <div id="add-field-tag-input">
+        <?php echo $this->field->input; ?>
+    </div>
+    <div id="add-field-tag-select">
+        <?php echo $this->field->select; ?>
+    </div>
+    <div id="add-field-tag-textarea">
+        <?php echo $this->field->textarea; ?>
+    </div>    
+</div>

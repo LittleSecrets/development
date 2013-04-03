@@ -716,6 +716,7 @@ class Zfmyadmin_CreateController extends Zfmyadmin_Controller_Action
         );
         $this->view->settingsJsonData = Zend_Json::encode($settings);  
         $this->view->form = $form;
+        $this->view->field = new Zfmyadmin_Forms_Create_Form_Field;
         
     }
 

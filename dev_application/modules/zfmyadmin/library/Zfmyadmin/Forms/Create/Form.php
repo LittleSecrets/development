@@ -18,7 +18,7 @@
  */
 
 /**
- * Form for created new action in existing controller.
+ * Form for created new form.
  *
  * @package    zfmyadmin
  * @subpackage forms
