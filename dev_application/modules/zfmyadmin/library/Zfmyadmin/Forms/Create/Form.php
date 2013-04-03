@@ -26,6 +26,26 @@
 
 class Zfmyadmin_Forms_Create_Form extends Zfmyadmin_Forms_Create
 {
+    public static $_form_methods = array(
+        '0' => '',
+        'GET'  => 'GET',
+        'POST' => 'POST',
+        'HEAD' => 'HEAD',
+    );
+    public static $_form_targets = array(
+        '0'       => '',        
+        '_blank'  => '_blank',
+        '_self'   => '_self',
+        '_parent' => '_parent',
+        '_top'    => '_top',
+    );
+
+    public static $_form_enctype = array(
+        '0' => '',
+        'application/x-www-form-urlencoded'  => 'application/x-www-form-urlencoded',
+        'multipart/form-data'                => 'multipart/form-data',
+        'text/plain'                         => 'text/plain',
+    );
 
     /**
      * Init form parametrs and create form elements
@@ -74,35 +94,35 @@ class Zfmyadmin_Forms_Create_Form extends Zfmyadmin_Forms_Create
                 'Errors',
         )); 
         $this->addElement($element);         
-                       
+ //====================================================================                      
         
         $element = new Zend_Form_Element_Text('formClassName', array(
             'id'      => 'create-form-class-name',
-            'size'    => 60,
+            'size'    => 50,
             'filters' => array('StringTrim'),
         ));
         $this->addElement($element);
         
         $element = new Zend_Form_Element_Text('formExtendsClassName', array(
             'id'      => 'create-form-extends-class-name',
-            'size'    => 60,
+            'size'    => 50,
             'filters' => array('StringTrim'),
         ));
         $this->addElement($element);
 
-        $element = new Zend_Form_Element_Text('formName', array(
-            'id'      => 'create-form-name',
-            'size'    => 30,
-            'filters' => array('StringTrim'),
-        ));
-        $this->addElement($element); 
-             
+        
+        
+//        =================================================================
+        
+//        ===============================================================        
+        
         $element = new Zend_Form_Element_Hidden('intentionSignature', array(
             'id'=>'intention-signature',
             'value'=>''
         ));
        
-        $this->addElement($element); 
+        $this->addElement($element);        
+        
         
          $element = new Zend_Form_Element_Hidden('creatorCategory', array(
             'id'      => 'creator-category',
@@ -112,6 +132,7 @@ class Zfmyadmin_Forms_Create_Form extends Zfmyadmin_Forms_Create
        
         $this->addElement($element); 
         
+       
         foreach ($this as $element) {        
             $element->setDecorators(array(
                 'ViewHelper',
@@ -119,9 +140,76 @@ class Zfmyadmin_Forms_Create_Form extends Zfmyadmin_Forms_Create
                 'Label',
             ));
         } 
-        
+        $this->addSubFormAttr();
         $this->setSubmit();
         
+    }
+    
+    public function addSubFormAttr()
+    {
+        $subform = new Zend_Form_SubForm();
+        $element = new Zend_Form_Element_Text('name', array(
+            'id'      => 'create-form-name',
+            'size'    => 50,
+            'filters' => array('StringTrim'),
+            'label'   => $this->translate('name'),
+        ));
+        $subform->addElement($element); 
+        
+        $element = new Zend_Form_Element_Text('action', array(
+            'id'      => 'create-form-formAction',
+            'size'    => 50,
+            'filters' => array('StringTrim'),
+            'label'   => $this->translate('action'),
+        ));
+        $subform->addElement($element); 
+        
+        $element = new Zend_Form_Element_Select('method', array(
+            'id'      => 'create-form-formMethod',
+            'filters' => array('StringTrim'),
+            'label'   => $this->translate('method'),
+        ));
+        $element->setMultiOptions(Zfmyadmin_Forms_Create_Form::$_form_methods);
+        $subform->addElement($element);
+        
+        $element = new Zend_Form_Element_Select('enctype', array(
+            'id'      => 'create-form-formEnctype',
+            'filters' => array('StringTrim'),
+            'label'   => $this->translate('enctype'),
+        ));
+        $element->setMultiOptions(Zfmyadmin_Forms_Create_Form::$_form_enctype);
+        $subform->addElement($element);        
+        
+        $element = new Zend_Form_Element_Text('id', array(
+            'id'      => 'create-form-formId',
+            'size'    => 50,
+            'filters' => array('StringTrim'),
+            'label'   => $this->translate('id'),
+        )); 
+        $subform->addElement($element);  
+        
+        $element = new Zend_Form_Element_Select('target', array(
+            'id'      => 'create-form-formTarget',
+            'multiple' => false,
+            'label'   => $this->translate('target'),
+        )); 
+        $element->setMultiOptions(Zfmyadmin_Forms_Create_Form::$_form_targets);
+        $subform->addElement($element);  
+        
+        foreach ($subform as $element) {        
+           $element->setDecorators(array(
+                'ViewHelper',
+                'Errors',
+                 array('Label', array('tag' => 'h4','class'  => 'element-label' )),
+                 array(array('data' => 'HtmlTag'), array('tag' => 'div', 'class'  => 'fieldset')),
+           ));
+        } 
+        
+        $subform->setDecorators(array(
+            'FormElements',
+        )); 
+        
+        $this->addSubForm($subform, 'attr');
     }
     
 }

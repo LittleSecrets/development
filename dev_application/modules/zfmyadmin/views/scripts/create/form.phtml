@@ -1,4 +1,14 @@
-<h1><?php echo $this->translate("Create Route");?></h1>
+<h1><?php echo $this->translate("Create Form");?></h1>
+<?php
+        if($_POST) {
+	echo '<pre>';
+		var_dump($_POST);
+	echo '</pre>';
+        
+        }
+
+?>
+
 <div id="tooltip"></div>
 <form action="<?php echo $this->form->getAction(); ?>" method="<?php echo $this->form->getMethod(); ?>" id="<?php echo $this->form->getAttrib('id'); ?>" class ="<?php echo $this->form->getAttrib('class'); ?>">
     <div class="fieldset">
@@ -10,7 +20,7 @@
         <div id="set-controller-settings-block" class="set-settings-block">
         <ul>
             <li><a href="#set-settings-block-class"><?php echo $this->translate("Class");?></a></li>
-            <li><a href="#set-settings-block-form"><?php echo $this->translate("Form settings");?></a></li>
+            <li><a href="#set-settings-block-form"><?php echo $this->translate("Form attributes");?></a></li>
             <li><a href="#set-settings-block-fields"><?php echo $this->translate("Fields");?></a></li>
 	</ul> 
           
@@ -22,14 +32,12 @@
                 <div class="fieldset">
                     <h4><?php echo $this->translate("Extends class of form");?> </h4>
                     <?php echo $this->form->formExtendsClassName; ?>
-                </div>     
-                <div class="fieldset">
-                    <h4><?php echo $this->translate("Form name");?> </h4>
-                    <?php echo $this->form->formName; ?>
-                </div>              
+                </div>
         </div>   
-        <div id="set-settings-block-form">
-            <?php //echo $this->partial('router-block.phtml', array('form'=>$this->form));?>
+        <div id="set-settings-block-form">           
+                <?php
+                    echo $this->form->attr;
+                ?>
         </div> 
         <div id="set-settings-block-fields">
             <?php //echo $this->partial('router-block.phtml', array('form'=>$this->form));?>
@@ -41,6 +49,8 @@
     <?php echo $this->form->createSubmit; ?> 
     <?php echo $this->form->intentionSignature; ?>
     <?php echo $this->form->creatorCategory; ?>
+    
+
 </form>
 
 <?php echo $this->partial("settings-buttons.phtml");?>

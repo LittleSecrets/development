@@ -703,7 +703,12 @@ class Zfmyadmin_CreateController extends Zfmyadmin_Controller_Action
         $form = $this->setFormDefaultModuleControllerAction($form);
         //$transaction = new Zfmyadmin_Models_Create_Router;
         $vars = new Zfmyadmin_Models_Vars;        
-       
+        if($this->getRequest()->isPost()) {
+
+        
+        } else {
+            
+        }
 
         $settings = $vars->getAllSettingsTemplates(
             Zfmyadmin_Models_Transaction::$_creatorsName[Zfmyadmin_Models_Operation::CATEGORY_FORM],    
