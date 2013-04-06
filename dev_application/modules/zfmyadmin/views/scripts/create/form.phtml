@@ -1,14 +1,4 @@
 <h1><?php echo $this->translate("Create Form");?></h1>
-<?php
-        if($_POST) {
-	echo '<pre>';
-		var_dump($_POST);
-	echo '</pre>';
-        
-        }
-
-?>
-
 <div id="tooltip"></div>
 <form action="<?php echo $this->form->getAction(); ?>" method="<?php echo $this->form->getMethod(); ?>" id="<?php echo $this->form->getAttrib('id'); ?>" class ="<?php echo $this->form->getAttrib('class'); ?>">
     <div class="fieldset">
@@ -65,7 +55,26 @@
                              <span class="ui-icon ui-icon-circle-minus"></span>
                         </div>
                     </td>
-                </tr>                
+                </tr> 
+                
+                <?php foreach ($this->formfields as $field): ?>
+                    <td><?php echo $field['general']['name'] ;?></td>
+                    <td><?php echo $field['general']['name'] ;?></td>
+                    <td><?php echo $field['general']['tag'] ;?></td>
+                    <td><?php echo $field['general']['type'] ;?></td>
+                    <td>
+                        <div data-number="0" title="Удалить переменную" class="ui-state-default ui-corner-all button-16 form-delete-field-button">
+                             <span class="ui-icon ui-icon-circle-minus"></span>
+                        </div>
+                    </td>                    
+                    <td>
+                        <div data-number="0" title="Удалить переменную" class="ui-state-default ui-corner-all button-16 form-delete-field-button">
+                             <span class="ui-icon ui-icon-circle-minus"></span>
+                        </div>
+                    </td>                
+                
+                
+                <?php endforeach; ?>
             </table>
             <div id="form-add-field-button" title="<?php echo $this->translate('Add variable'); ?>" class="ui-state-default ui-corner-all button-16">
                 <span class="ui-icon ui-icon-circle-plus"></span>
@@ -84,15 +93,32 @@
 
 <?php echo $this->partial("settings-buttons.phtml");?>
 <div id="add-form-field-dialog" style="display: none" title="<?php echo $this->translate("Add/Edit field");?>">
-    <?php echo $this->field->name; ?>
-    <?php echo $this->field->tag; ?>
-    <div id="add-field-tag-input">
+    <form action="<?php echo $this->field->getAction(); ?>" method="<?php echo $this->field->getMethod(); ?>" id="<?php echo $this->field->getAttrib('id'); ?>" class ="<?php echo $this->field->getAttrib('class'); ?>">
+    <div>
+     <?php echo $this->field->general; ?>   
+           
+    </div>
+
+    <div id="add-field-tag-input" class="add-field-tag">
         <?php echo $this->field->input; ?>
     </div>
-    <div id="add-field-tag-select">
+    <div id="add-field-tag-select" style="display: none" class="add-field-tag">
         <?php echo $this->field->select; ?>
     </div>
-    <div id="add-field-tag-textarea">
+    <div id="add-field-tag-textarea" style="display: none" class="add-field-tag">
         <?php echo $this->field->textarea; ?>
-    </div>    
+    </div> 
+    
+    <?php echo $this->field->createSubmit; ?>
+    <?php echo $this->field->formType; ?>
+   </form>
 </div>
+<script>
+    $(function(){
+        $('#create-form-formTag').bind('change', function(){
+            var tabId = '#add-field-tag-'+$(this).val();
+            $('div.add-field-tag').hide();
+            $(tabId).show();            
+        })        
+    })
+</script>

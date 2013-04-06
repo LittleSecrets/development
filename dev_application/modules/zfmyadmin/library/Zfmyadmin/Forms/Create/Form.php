@@ -188,6 +188,14 @@ class Zfmyadmin_Forms_Create_Form extends Zfmyadmin_Forms_Create
         )); 
         $subform->addElement($element);  
         
+        $element = new Zend_Form_Element_Text('class', array(
+            'id'      => 'create-form-formClass',
+            'size'    => 50,
+            'filters' => array('StringTrim'),
+            'label'   => $this->translate('class'),
+        )); 
+        $subform->addElement($element);         
+        
         $element = new Zend_Form_Element_Select('target', array(
             'id'      => 'create-form-formTarget',
             'multiple' => false,

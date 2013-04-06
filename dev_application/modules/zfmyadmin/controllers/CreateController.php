@@ -703,13 +703,23 @@ class Zfmyadmin_CreateController extends Zfmyadmin_Controller_Action
         $form = $this->setFormDefaultModuleControllerAction($form);
         //$transaction = new Zfmyadmin_Models_Create_Router;
         $vars = new Zfmyadmin_Models_Vars;        
+        if($this->getRequest()->isPost()&&$this->getRequest()->getParam('formType') == 'addField') {
+            $session = new Zend_Session_Namespace('zfmyadmin');
+            $formfields = $session->formfields;
+            $formfield = $this->getRequest()->getPost();
+            $formfields[] = $formfield;            
+            $session->formfields = $formfields;
+        } else {
+            
+        }
+
         if($this->getRequest()->isPost()) {
 
         
         } else {
             
         }
-
+        
         $settings = $vars->getAllSettingsTemplates(
             Zfmyadmin_Models_Transaction::$_creatorsName[Zfmyadmin_Models_Operation::CATEGORY_FORM],    
             $this->user->id            
@@ -717,6 +727,7 @@ class Zfmyadmin_CreateController extends Zfmyadmin_Controller_Action
         $this->view->settingsJsonData = Zend_Json::encode($settings);  
         $this->view->form = $form;
         $this->view->field = new Zfmyadmin_Forms_Create_Form_Field;
+        $this->view->formfields = $formfields;
         
     }
 
