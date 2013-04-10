@@ -33,7 +33,17 @@ class Zfmyadmin_Forms_Create_Form_Field extends Zfmyadmin_Forms_Create
         $this->addSubFormInput();
         $this->addSubFormSelect();
         $this->addSubFormTextarea();
-        $this->setSubmit();
+        
+//        $this->addSubFormValidators();
+        
+        $element = new Zend_Form_Element_Submit('addFormFieldSubmit', array(
+            'label'                  => $this->translate('Add field'),
+            'id'                     => 'create-field-submit'
+        ));
+        $this->addElement($element); 
+        $this->addFormFieldSubmit->setDecorators(array(
+            'ViewHelper',
+        ));
         
         $element = new Zend_Form_Element_Hidden('formType', array(
             'id'=>'intention-signature',
@@ -204,5 +214,50 @@ class Zfmyadmin_Forms_Create_Form_Field extends Zfmyadmin_Forms_Create
         } 
         
         $this->addSubForm($subform, 'textarea');
+    }
+    
+    public function addSubFormValidators($list) {
+        $subform = new Zend_Form_SubForm();
+        
+      
+        foreach ($list as $key => $value) {
+            $validatorSubform = new Zend_Form_SubForm();
+            
+            $element = new Zend_Form_Element_Checkbox('name', array(
+                'id'      => 'create-form-element-validator-'.$key,
+                'filters' => array('Int'),
+                'label'   =>  $value['name'].' - '.'('.$this->translate($value['description']).')',
+                'value'    => $value
+            ));      
+            $element->setDecorators(array(                
+                'ViewHelper',
+                'Errors',       
+                array('Label', array('tag' => 'span','class'  => 'element-validator-label' )),
+                array(array('data' => 'HtmlTag'), array('tag' => 'div', 'class'  => 'fieldset')),
+            ));
+            $validatorSubform->addElement($element);
+            
+            
+            $element = new Zend_Form_Element_Text('options', array(
+                'id'      => 'create-form-element-validator-options-'.$key,
+//                'filters' => array('Int'),
+//                'label'   =>  $value['description'].' - '.'('.$this->translate($value['description']).')',
+                'value'    => $value
+            ));
+            $validatorSubform->addElement($element);
+            
+            $validatorSubform->setDecorators(array(
+                'FormElements',
+                array('HtmlTag', array('tag' => 'div','class'  => 'create-form-element-validator' )),
+            ));  
+            $subform->addSubForm($validatorSubform, $key);
+        }
+        
+        
+        $subform->setDecorators(array(
+            'FormElements',
+            array('HtmlTag', array('tag' => 'div','class'  => 'create-form-element-validators' )),
+        )); 
+        $this->addSubForm($subform, 'validators');
     }
 }

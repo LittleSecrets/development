@@ -51,7 +51,6 @@ class Zfmyadmin_Models_Vars  extends Zend_Db_Table_Abstract
             $config = new Zend_Config_Ini($zfmyadmin->pathToModule.DIRECTORY_SEPARATOR.'configs'.DIRECTORY_SEPARATOR.'default.ini', 'user');
             $settings = $config->toArray();
             return $settings;
-            return Zfmyadmin_Models_User::$_defaultSettings;
         }
     }
 

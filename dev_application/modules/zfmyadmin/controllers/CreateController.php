@@ -726,7 +726,17 @@ class Zfmyadmin_CreateController extends Zfmyadmin_Controller_Action
         );
         $this->view->settingsJsonData = Zend_Json::encode($settings);  
         $this->view->form = $form;
-        $this->view->field = new Zfmyadmin_Forms_Create_Form_Field;
+        
+        $field = new Zfmyadmin_Forms_Create_Form_Field;
+        
+        $var = new Zfmyadmin_Models_Vars;        
+        $settings = $var->getUserSettings($this->user);       
+        $list = $settings['form']['validators'];
+        
+        $this->view->field = $field;
+        
+        $field->addSubFormValidators($list);
+        
         $this->view->formfields = $formfields;
         
     }

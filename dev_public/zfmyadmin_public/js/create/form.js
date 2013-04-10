@@ -9,7 +9,9 @@ $(function(){
     }); 
     
     $( "#form-add-field-button" ).bind('click', function(){
-            $( "#add-form-field-dialog" ).dialog( "open" );              
+            $('#set-form-field-settings-block').tabs( "select" , 'set-form-field-general');
+            $( "#add-form-field-dialog" ).dialog( "open" );  
+            
     });
 });
 

@@ -7,6 +7,7 @@
                 <li><a href="#user-settings-commit"><?php echo $this->translate('Commit settings');?></a></li>
                 <li><a href="#user-settings-doc-tabs"><?php echo $this->translate('Documentation settings');?></a></li>
                 <li><a href="#user-settings-codegenerator"><?php echo $this->translate('Codegenerator settings');?></a></li>
+                <li><a href="#user-settings-form"><?php echo $this->translate('Form');?></a></li>
             </ul>
 
             <div id="user-settings-personal-data">
@@ -94,7 +95,12 @@
 
                 </div>
             </div>
-
+            
+            <div id="user-settings-form">
+                <?php
+                    //echo $this->form->generator;
+                ?>
+            </div>
         </div> 
         <?php
             echo $this->form->submit;
