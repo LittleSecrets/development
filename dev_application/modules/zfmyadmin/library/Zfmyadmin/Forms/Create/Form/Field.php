@@ -228,40 +228,40 @@ class Zfmyadmin_Forms_Create_Form_Field extends Zfmyadmin_Forms_Create
                     array('Label', array('tag' => 'span', 'class' => 'element-validator-label')),
                     array(array('data' => 'HtmlTag'), array('tag' => 'div', 'class' => 'fieldset')),
                 ));
+                
+                
                 $validatorSubform->addElement($element);
-
                 if (!empty($value['options'])) {
                     $validatorOptionsSubform = new Zend_Form_SubForm();
+                    //$validatorOptionsSubform->setLabel($this->translate('Edin options'));
                     foreach ($value['options'] as $optionKey => $option) {
-
                         $element = new Zend_Form_Element_Text($optionKey, array(
-                                    'id' => 'create-form-element-validator-options-' . $optionKey . '-name',
-                                    'value' => $option['value'],
+                                    'id' => 'create-form-element-validator-option-' . $optionKey,
+                                    'value' => $option,
                                     'label' => $optionKey
                                 ));
                         $element->setDecorators(array(
                             'ViewHelper',
                             'Errors',
-                            array('Label', array('tag' => 'span', 'class' => 'element-validator-option-label')),
-                            array(array('data' => 'HtmlTag'), array('tag' => 'div', 'class' => 'fieldset')),
+                            'Label',
+                            array(array('data' => 'HtmlTag'), array('tag' => 'div', 'class' => 'create-form-element-validator-option')),
                         ));
-
-
                         $validatorOptionsSubform->addElement($element);
                     }
                     $validatorOptionsSubform->setDecorators(array(
                         'FormElements',
-                        array('HtmlTag', array('tag' => 'div', 'class' => 'create-form-element-validator')),
+//                        'Label',
+                        array('HtmlTag', array('tag' => 'div', 'class' => 'create-form-element-validator-options','style'=>'display:none;')),
                     ));
                     $validatorSubform->addSubForm($validatorOptionsSubform, 'options');
+//                    $validatorSubform->options->setLabel('Edin options');
                 }
-
-//                $validatorSubform->addElement($element);
-
                 $validatorSubform->setDecorators(array(
                     'FormElements',
-                    array('HtmlTag', array('tag' => 'div', 'class' => 'create-form-element-validator')),
+                    array('HtmlTag', array('tag' => 'div', 'class' => 'add-form-element-validator-block')),
                 ));
+                
+                
                 $subform->addSubForm($validatorSubform, $key);
             }
         }
@@ -269,7 +269,7 @@ class Zfmyadmin_Forms_Create_Form_Field extends Zfmyadmin_Forms_Create
 
         $subform->setDecorators(array(
             'FormElements',
-            array('HtmlTag', array('tag' => 'div', 'class' => 'create-form-element-validators')),
+//            array('HtmlTag', array('tag' => 'div', 'class' => 'create-form-element-validators')),
         ));
         $this->addSubForm($subform, 'validators');
     }
