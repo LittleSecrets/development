@@ -216,24 +216,37 @@ class Zfmyadmin_Forms_Create_Form_Field extends Zfmyadmin_Forms_Create
         foreach ($list as $key => $value) {
             $validatorSubform = new Zend_Form_SubForm();
             if ($value['enabled'] == 1) {
+
+                if (empty($value['options'])) {                    
+                    $label = $value['name']
+                            . ' - ' . '(' . $this->translate($value['description'])
+                            . ')';                    
+                } else {
+                    $class = 'has-options';
+                    $label = $value['name']
+                            . ' - ' . '(' . $this->translate($value['description'])
+                            . ')... ' . $this->translate('Check for edit ontions');
+                }
                 $element = new Zend_Form_Element_Checkbox('name', array(
                             'id' => 'create-form-element-validator-' . $key,
                             'filters' => array('Int'),
-                            'label' => $value['name'] . ' - ' . '(' . $this->translate($value['description']) . ')',
-                            'value' => $value
+                            'label' => $label,
+                            'value' => $value,
+                            'class' => $class,
                         ));
+
+
                 $element->setDecorators(array(
                     'ViewHelper',
                     'Errors',
                     array('Label', array('tag' => 'span', 'class' => 'element-validator-label')),
                     array(array('data' => 'HtmlTag'), array('tag' => 'div', 'class' => 'fieldset')),
                 ));
-                
-                
+
+
                 $validatorSubform->addElement($element);
                 if (!empty($value['options'])) {
                     $validatorOptionsSubform = new Zend_Form_SubForm();
-                    //$validatorOptionsSubform->setLabel($this->translate('Edin options'));
                     foreach ($value['options'] as $optionKey => $option) {
                         $element = new Zend_Form_Element_Text($optionKey, array(
                                     'id' => 'create-form-element-validator-option-' . $optionKey,
@@ -251,7 +264,7 @@ class Zfmyadmin_Forms_Create_Form_Field extends Zfmyadmin_Forms_Create
                     $validatorOptionsSubform->setDecorators(array(
                         'FormElements',
 //                        'Label',
-                        array('HtmlTag', array('tag' => 'div', 'class' => 'create-form-element-validator-options','style'=>'display:none;')),
+                        array('HtmlTag', array('tag' => 'div', 'class' => 'create-form-element-validator-options', 'style' => 'display:none;')),
                     ));
                     $validatorSubform->addSubForm($validatorOptionsSubform, 'options');
 //                    $validatorSubform->options->setLabel('Edin options');
@@ -260,8 +273,8 @@ class Zfmyadmin_Forms_Create_Form_Field extends Zfmyadmin_Forms_Create
                     'FormElements',
                     array('HtmlTag', array('tag' => 'div', 'class' => 'add-form-element-validator-block')),
                 ));
-                
-                
+
+
                 $subform->addSubForm($validatorSubform, $key);
             }
         }

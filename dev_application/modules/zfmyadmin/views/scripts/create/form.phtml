@@ -147,7 +147,15 @@
             var tabId = '#add-field-tag-'+$(this).val();
             $('div.add-field-tag').hide();
             $(tabId).show();            
-        })        
+        }) 
+        
+        $('input.has-options').bind('change',function(){
+            if($(this).prop("checked")){
+                $(this).parents(".add-form-element-validator-block").find(".create-form-element-validator-options").show();
+            } else {
+                $(this).parents(".add-form-element-validator-block").find(".create-form-element-validator-options").hide();
+            }
+        })
     })
 </script>
 
