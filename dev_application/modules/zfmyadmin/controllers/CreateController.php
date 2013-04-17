@@ -725,7 +725,7 @@ class Zfmyadmin_CreateController extends Zfmyadmin_Controller_Action
             $this->user->id            
         );
         $this->view->settingsJsonData = Zend_Json::encode($settings);  
-        $this->view->form = $form;
+        
         
         $field = new Zfmyadmin_Forms_Create_Form_Field;
         
@@ -733,10 +733,40 @@ class Zfmyadmin_CreateController extends Zfmyadmin_Controller_Action
         $settings = $var->getUserSettings($this->user);       
         $list = $settings['form']['validators'];
         
+        
+        $form->addSubFormDesign($design);
+        
         $this->view->field = $field;
         
         $field->addSubFormValidators($list);
         
+        
+        $showTemplateForms = Array();
+        
+        $designs = $settings['form']['designs'];
+        
+        foreach ($designs as $type => $design) {            
+           $showTemplateForm = new Zfmyadmin_Forms_Create_Form_Show;
+           $showTemplateForm->setAttrib('id', 'form-template-'.$type);
+           if(!empty($design['decorators'])){
+               $showTemplateForm->clearDecorators();
+               foreach ($design['decorators'] as $name => $decorator) {
+                   if(is_string($decorator)){
+                       $showTemplateForm->addDecorator($decorator);    
+                   }                   
+                   if(is_array($decorator)){
+                       $showTemplateForm->addDecorator($name, $decorator);
+                   }
+               }
+           }
+           
+           
+           $showTemplateForms[$type] = htmlspecialchars($showTemplateForm->render());
+        }
+
+        
+        $this->view->showTemplateForms = $showTemplateForms;//htmlspecialchars($html);
+        $this->view->form = $form;
         $this->view->formfields = $formfields;
         
     }

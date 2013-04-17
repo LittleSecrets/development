@@ -220,4 +220,38 @@ class Zfmyadmin_Forms_Create_Form extends Zfmyadmin_Forms_Create
         $this->addSubForm($subform, 'attr');
     }
     
+    public function addSubFormDesign($list)
+    {
+    
+        $subform = new Zend_Form_SubForm();
+        
+        $options = array();
+        foreach ($list as $key => $value) {
+            $options[$key] = $value['name'];            
+        }
+        //var_dump($options);
+        //die;
+        $element = new Zend_Form_Element_Radio('type', array(
+            'multiOptions' => $options
+        ));
+        
+        $element->setDecorators(array(
+            'ViewHelper',
+            'Errors',
+//            array('Label', array('tag' => 'span', 'class' => 'desine-type-label')),
+            array(array('data' => 'HtmlTag'), array('tag' => 'div', 'class' => 'fieldset fieldset-left-40')),
+        ));
+
+
+        $subform->addElement($element);      
+
+
+        $subform->setDecorators(array(
+            'FormElements',
+        ));
+        
+        
+        $this->addSubForm($subform, 'design');        
+        
+    }
 }

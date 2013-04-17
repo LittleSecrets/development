@@ -11,7 +11,7 @@
             <ul>
                 <li><a href="#set-settings-block-class"><?php echo $this->translate("Class"); ?></a></li>
                 <li><a href="#set-settings-block-attributes"><?php echo $this->translate("Form attributes"); ?></a></li>
-                <li><a href="#set-settings-block-desine"><?php echo $this->translate("Desine"); ?></a></li>
+                <li><a href="#set-settings-block-design"><?php echo $this->translate("Desine"); ?></a></li>
                 <li><a href="#set-settings-block-fields"><?php echo $this->translate("Fields"); ?></a></li>
             </ul> 
 
@@ -30,10 +30,18 @@
                 echo $this->form->attr;
                 ?>
             </div> 
-            <div id="set-settings-block-desine">           
+            <div id="set-settings-block-design" style=" height: 250px;  ">
+                 <div id="show-form-design" style="float: right; height: 200px; width: 475px; background-color: #cccccc; ">
+                     <?php foreach ($this->showTemplateForms as $showForm): ?>
+                     <pre>
+                    <?php echo $showForm; ?>
+                     </pre>
+                     <?php endforeach; ?>
+                </div>               
                 <?php
-                echo $this->form->desine;
+                echo $this->form->design;
                 ?>
+
             </div>             
             <div id="set-settings-block-fields">
                 <?php //echo $this->partial('router-block.phtml', array('form'=>$this->form));?>
@@ -103,7 +111,7 @@
         <div id="set-form-field-settings-block" class="set-settings-block">
             <ul>
                 <li><a href="#set-form-field-general"><?php echo $this->translate("General"); ?></a></li>
-                <li><a href="#set-form-field-desine"><?php echo $this->translate("Desine"); ?></a></li>
+                <li><a href="#set-form-field-design"><?php echo $this->translate("Desine"); ?></a></li>
                 <li><a href="#set-form-field-filters"><?php echo $this->translate("Filters"); ?></a></li>
                 <li><a href="#set-form-field-validators"><?php echo $this->translate("Validators"); ?></a></li>
             </ul>
@@ -124,9 +132,9 @@
                     <?php echo $this->field->textarea; ?>
                 </div> 
             </div>
-            <div id="set-form-field-general">
-            </div>
-            <div id="set-form-field-desine">
+
+            <div id="set-form-field-design">
+                <?php echo $this->field->design; ?>
             </div>
             <div id="set-form-field-filters">
             </div>
@@ -158,4 +166,9 @@
         })
     })
 </script>
-
+<style>
+    div.fieldset-left-40{
+       width: 40%;
+/*         float: left;*/
+    }
+</style>
