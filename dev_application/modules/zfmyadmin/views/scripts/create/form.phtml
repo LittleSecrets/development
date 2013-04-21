@@ -11,7 +11,7 @@
             <ul>
                 <li><a href="#set-settings-block-class"><?php echo $this->translate("Class"); ?></a></li>
                 <li><a href="#set-settings-block-attributes"><?php echo $this->translate("Form attributes"); ?></a></li>
-                <li><a href="#set-settings-block-design"><?php echo $this->translate("Desine"); ?></a></li>
+                <li><a href="#set-settings-block-design"><?php echo $this->translate("Design"); ?></a></li>
                 <li><a href="#set-settings-block-fields"><?php echo $this->translate("Fields"); ?></a></li>
             </ul> 
 
@@ -31,11 +31,11 @@
                 ?>
             </div> 
             <div id="set-settings-block-design" style=" height: 250px;  ">
-                 <div id="show-form-design" style="float: right; height: 200px; width: 475px; background-color: #cccccc; ">
-                     <?php foreach ($this->showTemplateForms as $showForm): ?>
-                     <pre>
-                    <?php echo $showForm; ?>
-                     </pre>
+                 <div id="show-form-design" style="float: right; height: 200px; width: 475px; background-color: #cccccc; overflow: auto">                     
+                     <?php foreach ($this->showTemplateForms as $formKey => $formBody): ?>
+                     <div class="design-type-preview" id="design-type-preview-<?php echo $formKey; ?>">
+                     <pre><?php echo $formBody; ?></pre>
+                     </div>
                      <?php endforeach; ?>
                 </div>               
                 <?php
@@ -111,7 +111,7 @@
         <div id="set-form-field-settings-block" class="set-settings-block">
             <ul>
                 <li><a href="#set-form-field-general"><?php echo $this->translate("General"); ?></a></li>
-                <li><a href="#set-form-field-design"><?php echo $this->translate("Desine"); ?></a></li>
+                <li><a href="#set-form-field-design"><?php echo $this->translate("Design"); ?></a></li>
                 <li><a href="#set-form-field-filters"><?php echo $this->translate("Filters"); ?></a></li>
                 <li><a href="#set-form-field-validators"><?php echo $this->translate("Validators"); ?></a></li>
             </ul>
@@ -137,6 +137,7 @@
                 <?php echo $this->field->design; ?>
             </div>
             <div id="set-form-field-filters">
+                <?php  echo $this->field->filters; ?>
             </div>
             <div id="set-form-field-validators">
                 <?php  echo $this->field->validators; ?>
@@ -164,11 +165,21 @@
                 $(this).parents(".add-form-element-validator-block").find(".create-form-element-validator-options").hide();
             }
         })
+        
+        $('input.design-type').bind('change',function(){
+            var  type = $(this).val();
+            $('div.design-type-preview').hide();
+            $('#design-type-preview-'+type).show();            
+        })
     })
 </script>
 <style>
     div.fieldset-left-40{
        width: 40%;
 /*         float: left;*/
+    }
+    
+    div.design-type-preview{
+        display: none;
     }
 </style>

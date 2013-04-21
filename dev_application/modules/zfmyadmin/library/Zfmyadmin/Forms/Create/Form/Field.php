@@ -286,5 +286,83 @@ class Zfmyadmin_Forms_Create_Form_Field extends Zfmyadmin_Forms_Create
         ));
         $this->addSubForm($subform, 'validators');
     }
+    
+    public function addSubFormFilters($list) {
+        $subform = new Zend_Form_SubForm();
+
+
+        foreach ($list as $key => $value) {
+            $filterSubform = new Zend_Form_SubForm();
+            if ($value['enabled'] == 1) {
+
+                if (empty($value['options'])) {                    
+                    $label = $value['name']
+                            . ' - ' . '(' . $this->translate($value['description'])
+                            . ')';                    
+                } else {
+                    $class = 'has-options';
+                    $label = $value['name']
+                            . ' - ' . '(' . $this->translate($value['description'])
+                            . ')... ' . $this->translate('Check for edit ontions');
+                }
+                $element = new Zend_Form_Element_Checkbox('name', array(
+                            'id' => 'create-form-element-filter-' . $key,
+                            'filters' => array('Int'),
+                            'label' => $label,
+                            'value' => $value,
+                            'class' => $class,
+                        ));
+
+
+                $element->setDecorators(array(
+                    'ViewHelper',
+                    'Errors',
+                    array('Label', array('tag' => 'span', 'class' => 'element-filter-label')),
+                    array(array('data' => 'HtmlTag'), array('tag' => 'div', 'class' => 'fieldset')),
+                ));
+
+
+                $filterSubform->addElement($element);
+                if (!empty($value['options'])) {
+                    $filterOptionsSubform = new Zend_Form_SubForm();
+                    foreach ($value['options'] as $optionKey => $option) {
+                        $element = new Zend_Form_Element_Text($optionKey, array(
+                                    'id' => 'create-form-element-filter-option-' . $optionKey,
+                                    'value' => $option,
+                                    'label' => $optionKey
+                                ));
+                        $element->setDecorators(array(
+                            'ViewHelper',
+                            'Errors',
+                            'Label',
+                            array(array('data' => 'HtmlTag'), array('tag' => 'div', 'class' => 'create-form-element-filter-option')),
+                        ));
+                        $filterOptionsSubform->addElement($element);
+                    }
+                    $filterOptionsSubform->setDecorators(array(
+                        'FormElements',
+//                        'Label',
+                        array('HtmlTag', array('tag' => 'div', 'class' => 'create-form-element-filter-options', 'style' => 'display:none;')),
+                    ));
+                    $filterSubform->addSubForm($filterOptionsSubform, 'options');
+//                    $validatorSubform->options->setLabel('Edin options');
+                }
+                $filterSubform->setDecorators(array(
+                    'FormElements',
+                    array('HtmlTag', array('tag' => 'div', 'class' => 'add-form-element-filter-block')),
+                ));
+
+
+                $subform->addSubForm($filterSubform, $key);
+            }
+        }
+
+
+        $subform->setDecorators(array(
+            'FormElements',
+//            array('HtmlTag', array('tag' => 'div', 'class' => 'create-form-element-validators')),
+        ));
+        $this->addSubForm($subform, 'filters');
+    }    
 
 }

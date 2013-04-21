@@ -229,10 +229,11 @@ class Zfmyadmin_Forms_Create_Form extends Zfmyadmin_Forms_Create
         foreach ($list as $key => $value) {
             $options[$key] = $value['name'];            
         }
-        //var_dump($options);
-        //die;
+//        var_dump($options);
+//        die;
         $element = new Zend_Form_Element_Radio('type', array(
-            'multiOptions' => $options
+            'multiOptions' => $options,
+            'class' => 'design-type'
         ));
         
         $element->setDecorators(array(

@@ -727,23 +727,27 @@ class Zfmyadmin_CreateController extends Zfmyadmin_Controller_Action
         $this->view->settingsJsonData = Zend_Json::encode($settings);  
         
         
-        $field = new Zfmyadmin_Forms_Create_Form_Field;
+        
         
         $var = new Zfmyadmin_Models_Vars;        
         $settings = $var->getUserSettings($this->user);       
-        $list = $settings['form']['validators'];
+        $validators = $settings['form']['validators'];
+        $filters = $settings['form']['filters'];
+        $designs = $settings['form']['designs'];
         
+        $form->addSubFormDesign($designs);
         
-        $form->addSubFormDesign($design);
-        
+        $field = new Zfmyadmin_Forms_Create_Form_Field;
+        $field->addSubFormValidators($validators);
+        $field->addSubFormFilters($filters);
         $this->view->field = $field;
         
-        $field->addSubFormValidators($list);
+        
         
         
         $showTemplateForms = Array();
         
-        $designs = $settings['form']['designs'];
+        
         
         foreach ($designs as $type => $design) {            
            $showTemplateForm = new Zfmyadmin_Forms_Create_Form_Show;
